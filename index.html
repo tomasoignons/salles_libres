@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <title>Salles libres</title>
+</head>
+<body>
+    <div class="container_nav_bar">
+        <div class="nav_bar">
+            <div class="lien1 lienclicable"><a href= "#lien1">Salles libres</a></div>
+            <div class="lien2 lienclicable"><a href= "#lien2">Prochaine heure</a></div>
+            <div class="lien3 lienclicable"><a href= "#lien3">Rechercher</a></div>
+        </div>
+    </div>
+
+    
+    <div class = "enormetitre">
+        <h1>Salles libres</h1>
+    </div>
+
+
+    <div class="conteneneurglobal">
+            <div class = "container contenulol">
+                    <div class="contenu">
+
+                        <div class = "maintenant content" id = "lien1">
+                            <div class = titre>
+                                <h2>Maintenant</h2>
+                            </div>
+                        </div>
+
+                        <div id = "contenu_maintenant" class = "listesalle">
+
+                        </div>
+                    </div>
+
+                    <div class="contenu">
+
+                        <div class = "prochaine_heure content" id="lien2">
+                            <div class = "titre">
+                                <h2>Prochaine heure</h2>
+                            </div>
+                        </div>
+            
+                        <div id = "contenu_prochaineheure" class="listesalle">
+
+                        </div>
+                    </div>
+                    
+                    <div class="contenu research">
+                        
+                        <div id = "rechercher" class = "content">
+                            <div class = "titre" id="lien3">
+                                <h2>Rechercher</h2>
+                            </div>
+                        </div>
+
+                        <div id = "selecteur_de_truc" class ="container2 researchcontent">
+                            <div id = "flechegauche" class="fleche">
+                                <img src="images/fleche_gauche.png" class = "button" id="gauche">
+                            </div>
+                            <div id = "containerresearch" class="containerresearch">
+                                <div id = "user_research" class="slider">
+                                    <div class="researchtitle" id ="researchtitle">Planning d'une salle</div>
+                                </div>
+                            </div>
+
+                            <div id = "flechedroite" class = "fleche">
+                                <img src="images/fleche_droite.png" class="button" id="droite">
+                            </div>
+
+                            
+                        </div>
+                        <div class="conteneurducontenu" id="conteneurducontenu">
+                            <div class="content_research" id="content_research">
+                                <div class = "contenudelarecherche" id="contenudelarecherche"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+    </div>
+        
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
