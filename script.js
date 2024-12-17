@@ -1,16 +1,16 @@
 
-//---------------------------------------------------------CREATION DE LA MEGA LISTE DE SALLES--------------------------------
+//-----CREATION DE LA MEGA LISTE DE SALLES-----
 
 class Sallemodel {
     constructor (name, description, image, planning, temps, duree, disponibilite, note) {
-        this.name = name,
-        this.description = description,
-        this.image = image,
-        this.planning = planning,
-        this.temps = temps,
-        this.duree = duree,
-        this.disponibilite =disponibilite,
-        this.note = note
+        this.name = name, //Nom de la salle
+        this.description = description, //Description de la salle
+        this.image = image, //Image de référence pour décorer le fond en fonction de salle
+        this.planning = planning, //Le planning des horaires de la salle
+        this.temps = temps, //A développer
+        this.duree = duree, //A développer
+        this.disponibilite = disponibilite, //A développer
+        this.note = note //Note de la salle sur 20
     }
 }
 
@@ -22,12 +22,14 @@ function resetSalleList (){
             "GF11",
             "une salle bien sympathique, où a étudié le créateur de cette application",
             "GF11",
-            [
-                [1, 1, 1, 1, 1, 0, 1, 6, 1, 6],
-                [1, 0, 1, 1, 0, 1, 1, 1, 1, 0],
-                [1, 1, 1, 4, 1, 1, 1, 1, 1, 1],
-                [1, 0, 1, 1, 0, 1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 0, 6, 6, 4, 1]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      1,      0,      1,      1,      1,      1,      0,      0], //Lundi
+                [1,      1,      1,      4,      6,      0,      1,      1,      1,      1,      0], //Mardi
+                [1,      1,      1,      1,      0,      1,      1,      1,      1,      0,      0], //Mercredi
+                [1,      1,      1,      1,      0,      0,      1,      1,      6,      1,      0], //Jeudi
+                [1,      1,      1,      1,      0,      0,      6,      6,      0,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -40,12 +42,14 @@ function resetSalleList (){
             "GF15",
             "La meilleure salle de mathématique, la ZGAM perdurera toujours !",
             "GF15",
-            [
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 4],
-                [1, 1, 4, 1, 0, 1, 1, 1, 6, 1],
-                [1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
-                [1, 0, 1, 1, 0, 1, 1, 1, 6, 1],
-                [1, 1, 1, 1, 1, 6, 1, 1, 1, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      1,      0,      1,      1,      6,      6,      1,      0], //Lundi
+                [1,      1,      1,      1,      0,      0,      1,      1,      1,      1,      0], //Mardi
+                [1,      0,      1,      1,      1,      0,      1,      4,      1,      0,      0], //Mercredi
+                [0,      0,      1,      1,      0,      1,      1,      1,      1,      1,      0], //Jeudi
+                [1,      1,      1,      1,      0,      6,      1,      4,      6,      1,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -58,12 +62,14 @@ function resetSalleList (){
             "GF23",
             "souvent dispo, souvent pleine de monde. Beaucoup trop bruyante, je déconseille fortement",
             "GF23",
-            [
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-                [1, 1, 1, 1, 1, 0, 1, 1, 4, 1],
-                [6, 1, 1, 0, 0, 1, 1, 1, 1, 0],
-                [1, 0, 1, 1, 0, 1, 1, 6, 1, 1],
-                [1, 1, 1, 1, 0, 0, 1, 1, 4, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      1,      0,      0,      1,      1,      4,      0,      0], //Lundi
+                [1,      1,      1,      0,      0,      0,      1,      1,      6,      4,      0], //Mardi
+                [1,      1,      1,      0,      1,      1,      1,      6,      1,      0,      0], //Mercredi
+                [0,      0,      1,      1,      0,      1,      1,      1,      0,      1,      0], //Jeudi
+                [1,      1,      1,      1,      1,      0,      1,      1,      1,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -76,12 +82,14 @@ function resetSalleList (){
             "GF24",
             "sûrement la meilleure salle de tout le lycée, discrète, souvent libre, pas trop de monde",
             "GF24",
-            [
-                [1, 1, 0, 1, 0, 0, 1, 1, 4, 0],
-                [1, 1, 0, 0, 1, 4, 1, 1, 0, 0],
-                [1, 0, 0, 0, 4, 1, 1, 0, 0, 0],
-                [1, 0, 1, 1, 0, 1, 1, 6, 1, 0],
-                [1, 1, 1, 1, 0, 0, 1, 1, 1, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      4,      1,      1,      1,      1,      1,      1,      0,      0], //Lundi
+                [6,      6,      1,      1,      0,      0,      1,      1,      1,      0,      0], //Mardi
+                [1,      0,      0,      1,      1,      0,      1,      0,      0,      0,      0], //Mercredi
+                [0,      0,      1,      1,      0,      1,      1,      1,      0,      0,      0], //Jeudi
+                [1,      1,      1,      1,      1,      1,      1,      1,      6,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -94,12 +102,14 @@ function resetSalleList (){
             "GF25",
             "inconnue au bataillon, à côté de la GF23, il y a souvent du monde puisque les personnes fuient la GF23 ici",
             "GF25",
-            [
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 0],
-                [1, 1, 0, 1, 0, 1, 1, 1, 0, 0],
-                [1, 1, 1, 0, 6, 1, 1, 6, 1, 0],
-                [1, 0, 1, 1, 0, 1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 1, 1, 1, 1, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      1,      4,      1,      1,      1,      1,      1,      0], //Lundi
+                [1,      1,      1,      1,      0,      0,      1,      1,      1,      1,      0], //Mardi
+                [1,      1,      1,      1,      1,      1,      1,      0,      4,      0,      0], //Mercredi
+                [0,      0,      1,      1,      0,      0,      1,      1,      0,      0,      0], //Jeudi
+                [1,      1,      1,      1,      1,      0,      4,      1,      6,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -112,12 +122,14 @@ function resetSalleList (){
             "GF30",
             "assez discète, il faut savoir où la trouver, et en plus, elle est toujours prise",
             "GF30",
-            [
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-                [1, 1, 1, 1, 1, 4, 1, 1, 1, 1],
-                [1, 1, 1, 0, 0, 1, 1, 1, 1, 0],
-                [1, 1, 1, 1, 4, 1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 1, 1, 1, 1, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      1,      1,      1,      1,      1,      6,      1,      0], //Lundi
+                [1,      1,      1,      1,      4,      0,      1,      1,      1,      1,      0], //Mardi
+                [1,      0,      6,      1,      0,      0,      1,      0,      0,      0,      0], //Mercredi
+                [0,      0,      1,      1,      0,      1,      1,      1,      0,      1,      0], //Jeudi
+                [1,      1,      1,      1,      6,      0,      1,      1,      1,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -130,12 +142,14 @@ function resetSalleList (){
             "GF32",
             "les gens viennent souvent dormir, donc viens pas manger ici",
             "GF32",
-            [
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 0],
-                [1, 1, 1, 0, 0, 0, 1, 1, 4, 0],
-                [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                [1, 0, 1, 1, 0, 1, 1, 1, 0, 1],
-                [1, 1, 1, 1, 0, 0, 4, 0, 1, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      1,      0,      0,      0,      1,      0,      1,      0], //Lundi
+                [1,      1,      1,      1,      0,      0,      0,      0,      1,      1,      0], //Mardi
+                [1,      1,      1,      1,      0,      1,      1,      0,      0,      1,      0], //Mercredi
+                [0,      0,      1,      1,      0,      1,      1,      1,      1,      4,      0], //Jeudi
+                [1,      1,      1,      1,      1,      1,      1,      1,      6,      1,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -148,12 +162,14 @@ function resetSalleList (){
             "GF34",
             "Pour des raisons que j'ignone, cette salle est souvent pleine",
             "GF34",
-            [
-                [1, 1, 1, 1, 0, 0, 1, 1, 4, 0],
-                [1, 0, 1, 1, 0, 0, 1, 1, 0, 0],
-                [1, 1, 1, 4, 0, 1, 1, 0, 0, 0],
-                [1, 0, 1, 1, 0, 1, 1, 1, 1, 0],
-                [1, 1, 1, 1, 0, 0, 4, 1, 1, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      1,      4,      1,      1,      1,      1,      0,      0], //Lundi
+                [1,      1,      1,      1,      0,      0,      1,      1,      1,      4,      0], //Mardi
+                [1,      1,      1,      1,      1,      0,      0,      0,      0,      0,      0], //Mercredi
+                [0,      0,      4,      1,      0,      1,      1,      1,      1,      0,      0], //Jeudi
+                [1,      1,      0,      1,      1,      1,      1,      1,      0,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -166,12 +182,14 @@ function resetSalleList (){
             "GF40",
             "inconnue au bataillon, à droite du bureau de Mme Reiss",
             "GF40",
-            [
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 0, 1, 1, 4, 1],
-                [1, 1, 1, 0, 1, 1, 1, 1, 0, 0],
-                [1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 0, 1, 1, 1, 1]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      0,      6,      0,      1,      1,      1,      1,      0], //Lundi
+                [1,      1,      1,      1,      0,      0,      1,      1,      1,      1,      0], //Mardi
+                [1,      0,      1,      6,      0,      1,      1,      1,      1,      0,      0], //Mercredi
+                [1,      1,      1,      1,      1,      0,      1,      4,      4,      0,      0], //Jeudi
+                [1,      1,      1,      1,      0,      0,      1,      1,      1,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -184,12 +202,14 @@ function resetSalleList (){
             "GF41",
             "Salle calme, sauf quand des terminales viennent faire des tierlists et hurlent",
             "GF41",
-            [
-                [1, 1, 0, 1, 1, 0, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 0, 1, 1, 1, 1],
-                [1, 0, 1, 1, 0, 0, 4, 1, 1, 1],
-                [1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 4, 1, 1, 1, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      1,      0,      0,      1,      1,      1,      1,      0], //Lundi
+                [1,      1,      1,      0,      0,      0,      1,      1,      1,      1,      0], //Mardi
+                [1,      1,      1,      4,      6,      1,      1,      0,      6,      0,      0], //Mercredi
+                [1,      1,      1,      1,      0,      1,      1,      0,      1,      0,      0], //Jeudi
+                [1,      1,      1,      1,      0,      4,      4,      1,      4,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -202,12 +222,14 @@ function resetSalleList (){
             "GF42",
             "salle exentrée, plutôt pas mal",
             "GF42",
-            [
-                [1, 1, 1, 1, 0, 0, 1, 1, 1, 0],
-                [1, 1, 1, 1, 0, 0, 1, 1, 0, 0],
-                [1, 0, 6, 6, 0, 1, 1, 0, 0, 0],
-                [1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
-                [1, 1, 1, 1, 0, 1, 1, 1, 1, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      1,      4,      0,      4,      1,      1,      4,      0], //Lundi
+                [1,      1,      1,      1,      0,      0,      1,      1,      6,      1,      0], //Mardi
+                [0,      1,      1,      1,      1,      1,      1,      6,      6,      0,      0], //Mercredi
+                [0,      0,      4,      1,      0,      0,      1,      1,      4,      0,      0], //Jeudi
+                [0,      0,      0,      0,      0,      1,      1,      1,      4,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -220,12 +242,14 @@ function resetSalleList (){
             "GF43",
             "salle centrale, domaine des terminales, 1eres passez votre chemin",
             "GF43",
-            [
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 0, 1, 1, 1, 0],
-                [1, 0, 1, 0, 6, 0, 1, 1, 0, 0],
-                [1, 1, 1, 1, 0, 0, 1, 1, 1, 0],
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      0,      0,      0,      6,      1,      1,      1,      0], //Lundi
+                [1,      1,      1,      1,      0,      0,      1,      1,      1,      4,      0], //Mardi
+                [1,      0,      1,      1,      1,      0,      1,      0,      6,      0,      0], //Mercredi
+                [1,      1,      1,      1,      0,      1,      1,      0,      1,      1,      0], //Jeudi
+                [1,      1,      1,      1,      1,      0,      4,      1,      4,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -238,12 +262,14 @@ function resetSalleList (){
             "GF44",
             "super discrète, souvent remplie de littéraires... A voir...",
             "GF44",
-            [
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-                [1, 0, 1, 0, 0, 0, 1, 1, 1, 0],
-                [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                [1, 0, 1, 1, 0, 1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 0, 1, 0, 4, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      0,      0,      1,      1,      0,      0,      1,      0], //Lundi
+                [1,      1,      0,      0,      0,      0,      1,      1,      6,      0,      0], //Mardi
+                [0,      1,      1,      0,      0,      0,      0,      0,      4,      1,      0], //Mercredi
+                [0,      0,      6,      1,      0,      0,      1,      1,      1,      0,      0], //Jeudi
+                [0,      0,      1,      1,      1,      1,      1,      1,      6,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -256,12 +282,14 @@ function resetSalleList (){
             "GF45",
             "les gens y font la sieste, donc viens te joindre à eux !",
             "GF45",
-            [
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-                [1, 1, 1, 1, 1, 0, 1, 1, 4, 1],
-                [0, 0, 1, 1, 1, 1, 6, 1, 1, 0],
-                [1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 1, 6, 4, 1, 6]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      0,      1,      4,      0,      1,      1,      0,      0,      0], //Lundi
+                [1,      1,      1,      1,      0,      0,      1,      1,      1,      0,      0], //Mardi
+                [1,      0,      0,      1,      1,      0,      0,      6,      0,      6,      0], //Mercredi
+                [1,      1,      1,      1,      0,      1,      1,      1,      1,      0,      0], //Jeudi
+                [1,      1,      1,      1,      0,      0,      1,      1,      1,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -274,12 +302,14 @@ function resetSalleList (){
             "GF50",
             "mec t'es vraiment sûr de vouloir aller au 5e ?",
             "GF50",
-            [
-                [1, 1, 1, 6, 4, 0, 1, 1, 1, 0],
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 0],
-                [0, 0, 6, 0, 1, 1, 1, 1, 0, 0],
-                [1, 1, 1, 1, 4, 0, 1, 1, 1, 0],
-                [1, 1, 1, 1, 0, 1, 1, 1, 1, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      1,      0,      0,      1,      1,      1,      1,      1,      0], //Lundi
+                [1,      4,      1,      1,      0,      1,      1,      1,      6,      6,      0], //Mardi
+                [1,      0,      1,      1,      1,      0,      0,      1,      1,      0,      0], //Mercredi
+                [1,      1,      1,      1,      0,      1,      1,      1,      1,      0,      0], //Jeudi
+                [1,      1,      1,      1,      1,      0,      1,      1,      1,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -292,12 +322,14 @@ function resetSalleList (){
             "GF51",
             "et oui, on tient la salle la plus excentrée, au moins si t'y vas t'es sûr qu'elle soit libre",
             "GF51",
-            [
-                [1, 1, 0, 4, 4, 0, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 0, 1, 1, 1, 0],
-                [0, 0, 1, 1, 0, 0, 1, 1, 0, 0],
-                [1, 1, 1, 1, 0, 0, 1, 1, 0, 0],
-                [1, 1, 1, 1, 0, 1, 6, 1, 1, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      6,      1,      0,      0,      1,      1,      1,      1,      0,      0], //Lundi
+                [1,      1,      1,      1,      0,      0,      1,      1,      1,      6,      0], //Mardi
+                [1,      0,      4,      1,      1,      0,      0,      0,      0,      0,      0], //Mercredi
+                [1,      1,      1,      1,      0,      0,      1,      0,      6,      1,      0], //Jeudi
+                [1,      1,      1,      1,      1,      0,      1,      1,      0,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -310,12 +342,14 @@ function resetSalleList (){
             "GF52",
             "détruis ton cardio si tu veux, ce n'est pas mon problème",
             "GF52",
-            [
-                [0, 1, 1, 6, 6, 0, 1, 1, 1, 1],
-                [1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-                [0, 1, 1, 1, 1, 0, 1, 1, 1, 0],
-                [1, 1, 1, 1, 0, 0, 1, 1, 0, 1],
-                [1, 1, 1, 1, 6, 4, 1, 1, 4, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [1,      1,      0,      0,      4,      1,      1,      1,      1,      6,      0], //Lundi
+                [4,      1,      1,      1,      0,      0,      1,      1,      4,      4,      0], //Mardi
+                [0,      0,      1,      1,      1,      1,      1,      4,      0,      1,      0], //Mercredi
+                [1,      1,      1,      1,      0,      1,      1,      1,      1,      0,      0], //Jeudi
+                [1,      1,      1,      1,      4,      6,      1,      1,      4,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -328,12 +362,14 @@ function resetSalleList (){
             "GF53",
             "salle d'examen, interdit de manger",
             "GF53",
-            [
-                [0, 1, 0, 0, 0, 0, 1, 1, 1, 1],
-                [0, 0, 1, 1, 0, 1, 1, 1, 1, 1],
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                [1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+                [0,      0,      0,      1,      0,      0,      0,      1,      1,      0,      0], //Lundi
+                [0,      0,      0,      0,      0,      1,      1,      1,      1,      1,      0], //Mardi
+                [0,      0,      1,      1,      1,      0,      0,      0,      0,      0,      0], //Mercredi
+                [1,      1,      1,      1,      1,      1,      1,      0,      1,      6,      0], //Jeudi
+                [1,      1,      1,      1,      0,      0,      0,      4,      0,      0,      0], //Vendredi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1], //Samedi
+                [1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1]  //Dimanche
             ],
             "0h00m",
             0,
@@ -349,24 +385,24 @@ function resetSalleList (){
 
 
 
-//avoir l'heure et les minutes actuelles dans une liste
+//-----Récupérer l'heure actuelle sous la forme d'une liste-----
 function Heure(){
     const dateactuelle = new Date();
     heure = [dateactuelle.getHours(), dateactuelle.getMinutes()];
     return (heure)
 };
 
-//avoir le jour, le mois, et l'année dans une liste
+//-----Récupérer la date d'aujourd'hui sous la forme d'une liste-----
 function FonctionDate(){
     const dateactuelle = new Date();
     date = [dateactuelle.getDate(), dateactuelle.getMonth()+1, dateactuelle.getFullYear()]
     return(date)
 }
 
-//avoir le numéro de la semaine d'une date
+//-----Obtenir le numero de la semaine-----
 function numerosemaine(date){
-    const dateactuelle = new Date(date[2], date[1]-1, date[0]);
-    const oneJan = new Date(dateactuelle.getFullYear(),0,1);
+    const dateactuelle = new Date(date[2], date[1]-1, date[0]); //Récupération de la date actuelle
+    const oneJan = new Date(dateactuelle.getFullYear(),0,1); //Récupération de la date du 1 janvier
     let numberOfDays = Math.floor((dateactuelle - oneJan) / (24 * 60 * 60 * 1000));
     let numerosemaine = Math.ceil(( dateactuelle.getDay() + 1 + numberOfDays) / 7);
     return(numerosemaine)
@@ -376,15 +412,9 @@ function numerosemaine(date){
 //probaabilité importante qu'il y ait un truc qui merde ici lol
 function paireimpaire(date){
     let paireimpaire = numerosemaine(date)%2
-    if (date[2] == 2022 && paireimpaire == 1){
-        return ("B")
-    } else if (date[2] == 2022 && paireimpaire == 0){
+    if (paireimpaire == 0){
         return ("A")
-    } else if (date[2]== 2023 && paireimpaire == 0){
-        return ("A")
-    } else if (date[2] == 2023 && paireimpaire == 1){
-        return ("B")
-    } else {
+    } else if (paireimpaire == 1){
         return ("B")
     }
 }
@@ -459,79 +489,26 @@ function numeroheuredecours(heuredonnee){
 }
 
 
-//savoir quel jour de la semaine on est (de 0 à 6, en fonction d'une date)
+//-----Connaitre un jour de la semaine pour une date donnée | Les jours de la semaines sont : Dimanche = 0; Lundi = 1; Mardi = 2; Mercredi = 3; Jeudi = 4; Vendredi = 5; Samedi = 6-----
 function joursemaine(date){
-
-    let mois = date[1]
-    let jour = date[0]
-    let annee = date[2]    
-
-    let joursemaine = 0
-
-    if (mois <3){
-        joursemaine = Math.round((((23*mois)/9)+jour+4+annee+((annee-1)/4)-((annee-1)/100)+((annee-1)/400))%7)
-    } else {
-        joursemaine = Math.round((((23*mois)/9)+jour+2+annee+((annee)/4)-((annee)/100)+((annee)/400))%7)
+    
+    let date_find = new Date(date[2],date[1]-1,date[0]) //Initialisation de la date à la date choisi par l'utilisateur
+    
+    let joursemaine = date_find.getDay() - 1
+    
+    if (joursemaine < 0){
+        joursemaine = 6
     }
     
-    //attention, ici c'est quand même bien foireux, on part de l'algorithme, et de mémoire, le 1 c'est pour le Dimanche.
-    if(joursemaine == 1){
-        joursemaine = 6
-    } else if (joursemaine == 7){
-        joursemaine = 5
-    } else {
-        joursemaine = joursemaine -2
-    }
     return (joursemaine)
 }
 
-//avoir l'heure qui suit après
+//-----Obtenir la prochaine heure de début de cours-----
 function heureapres(heure){
-    let temps = heure[0]*60 + heure[1] + 55;
-    let minutes = temps%60
-    let Heureapres = (temps-minutes)/60
-    return([Heureapres, minutes]) 
-}
-
-
-function nombredejoursmois(mois, annee){
-    if (mois == 1 || mois == 3 || mois == 5 || mois == 7 || mois == 8 || mois == 10 || mois == 12){
-        return (31)
-    } else if (mois == 4 || mois == 6 || mois == 9 || mois == 11){
-        return (30)
-    } else if (mois == 2 && annee%4 !==0){
-        return(28)
-    } else if (mois == 2 && annee%4 == 0){
-        return(29)
-    }
-}
-
-function moisenfonctionnombre(mois){
-    if (mois == 1){
-        return ("janvier")
-    } else if (mois == 2){
-        return ("fevrier")
-    } else if (mois == 3){
-        return ("mars")
-    } else if (mois == 4){
-        return ("avril")
-    } else if (mois == 5){
-        return ("mai")
-    } else if (mois == 6){
-        return ("juin")
-    } else if (mois == 7){
-        return ("juillet")
-    } else if (mois == 8){
-        return ("août")
-    } else if (mois == 9){
-        return ("septembre")
-    } else if (mois == 10){
-        return ("octobre")
-    } else if (mois == 11){
-        return ("novembre")
-    } else if (mois == 12){
-        return ("décembre")
-    }
+    let temps = heure[0]*60 + heure[1] + 55; //Convertion du temps en minute en rajoutant 55 minutes
+    let minutes = temps%60 //Récupération des heures pour la prochaine heure
+    let Heureapres = (temps-minutes)/60 //Récupération des minutes pour la prochaine heure
+    return([Heureapres, minutes])
 }
 
 function moisenfonctionnom(mois){
@@ -563,27 +540,7 @@ function moisenfonctionnom(mois){
 }
 
 function heuredecoursfonctionstring (heuredecours){
-    if (heuredecours == "de 8h20 à 9h15"){
-        return (0)
-    } else if (heuredecours == "de 9h15 à 10h10"){
-        return (1)
-    } else if (heuredecours == "de 10h30 à 11h25"){
-        return (2)
-    } else if (heuredecours == "de 11h25 à 12h20"){
-        return (3)
-    } else if (heuredecours == "de 12h20 à 13h15"){
-        return (4)
-    } else if (heuredecours == "de 13h15 à 14h10"){
-        return (5)
-    } else if (heuredecours == "de 14h10 à 15h05"){
-        return (6)
-    } else if (heuredecours == "de 15h05 à 16h00"){
-        return (7)
-    } else if (heuredecours == "de 16h15 à 17h10"){
-        return (8)
-    } else if (heuredecours == "de 17h10 à 18h05"){
-        return (9)
-    } 
+    return ListeHeures.indexOf(heuredecours.split(" ")[1])
 }
 //-----------------------------------------------GERER LES DIFFERENTES SALLES DISPONIBLES---------------------------------------------------
 
@@ -591,12 +548,15 @@ function heuredecoursfonctionstring (heuredecours){
 function sallesdispo(date, heure){
     jour = joursemaine(date)
     paire = paireimpaire(date)
+    if (heure == undefined){
+        heure = 0
+    }
     if (heure[1] !== undefined){
         heure = numeroheuredecours(heure)
     }
 
     let sallesdisponibles = []
-    if (jour == 5 || jour == 6 || heure == 30){
+    if (heure == 30){
         return(sallesdisponibles)
     }
 
@@ -631,9 +591,9 @@ function findsalle(sallename){
 
 //mega fonction pour juste créer une div avec un élément parent précis, et une classname logique
 function creatediv(elementparent, classname){
-    const div = document.createElement("div")
-    elementparent.appendChild(div)
-    div.classList.add(classname)
+    const div = document.createElement("div") //Création d'un élément | type -> div
+    elementparent.appendChild(div) //Attaché l'élement crée div à un parent qui est argument
+    div.classList.add(classname) //Ajouter une class à l'élément div crée
     return(div)
 }
 
@@ -679,7 +639,7 @@ resetSalleList()
 const carousselmaintenant = document.getElementById("contenu_maintenant")
 const carousselheureapres = document.getElementById("contenu_prochaineheure")
 
-//remplir le caroussel maintenant
+//-----Remplir le caroussel des horraires des salles disponibles maintenant-----
 const dateajd = FonctionDate()
 const heureactuelle = Heure()
 const sallesdisponibles = sallesdispo(dateajd, heureactuelle)
@@ -732,25 +692,10 @@ function createnomdelasalle(parentelement){
     container.appendChild(selecteurnomdelasalle)
     selecteurnomdelasalle.classList.add("selecteur")
     selecteurnomdelasalle.classList.add("inputnomdelasalle")
-
-    createoption(selecteurnomdelasalle, "GF11")
-    createoption(selecteurnomdelasalle, "GF15")
-    createoption(selecteurnomdelasalle, "GF23")
-    createoption(selecteurnomdelasalle, "GF24")
-    createoption(selecteurnomdelasalle, "GF25")
-    createoption(selecteurnomdelasalle, "GF30")
-    createoption(selecteurnomdelasalle, "GF32")
-    createoption(selecteurnomdelasalle, "GF34")
-    createoption(selecteurnomdelasalle, "GF40")
-    createoption(selecteurnomdelasalle, "GF41")
-    createoption(selecteurnomdelasalle, "GF42")
-    createoption(selecteurnomdelasalle, "GF43")
-    createoption(selecteurnomdelasalle, "GF44")
-    createoption(selecteurnomdelasalle, "GF45")
-    createoption(selecteurnomdelasalle, "GF50")
-    createoption(selecteurnomdelasalle, "GF51")
-    createoption(selecteurnomdelasalle, "GF52")
-    createoption(selecteurnomdelasalle, "GF53")
+    
+    for (i = 0; i < SalleList.length; i++){
+        createoption(selecteurnomdelasalle, SalleList[i].name)
+    }
 
     return(container)
 }
@@ -765,16 +710,16 @@ function createdateinput(parentelement){
     container.appendChild(inputdate)
     inputdate.setAttribute("type", "datetime-local")
 
-    //cet unique truc sert à créer le calendrier mdr
+    //ce unique truc sert à créer le calendrier mdr
     flatpickr("input[type=datetime-local]", {
         "altInput": true,
         "altFormat": "j F Y",
         "dateFormat": "d.m.Y",
         "defaultDate" :"today",
-        "maxDate": "15.6.2023",
+        "maxDate": "15.6.2025",
         "minDate": "2.9.2022",
         "locale": {
-        "firstDayOfWeek": 1 // start week on Monday
+        "firstDayOfWeek": 1 // start week on Monday Probleme ici, les jours sont décallés de 1 vers la fin de la semaine. Le lundi est le mardi etc...
         }
     });
     const pbpotentiel = document.getElementsByClassName("flatpickr-calendar")
@@ -783,59 +728,53 @@ function createdateinput(parentelement){
     }
 }
 
+//-----Fonction essentiel car elle gère la création du bouton sur la page et lui permet de fonctionner-----
 function createrecherchebutton(parentelement){
     const container = creatediv(parentelement, "container_button")
-    const button = document.createElement("button")
-    container.appendChild(button)
-    button.classList.add("button_research")
-    button.textContent = "RECHERCHER"
+    const button = document.createElement("button") //Création d'un élément | type --> button
+    container.appendChild(button) //Attaché l'élement crée button à un parent qui est le container crée juste au-dessus
+    button.classList.add("button_research") //Ajouter une class à l'élément div crée
+    button.textContent = "RECHERCHER" //Mettre un texte au bouton crée
 
+    //-----Ajout d'une fonction de lecture au button qui s'active à chaque fois qu'il est clické-----
     button.addEventListener('click', () => {
         recherchelayout(parentelement)
       });
 }
 
-function createinputheuredecours(parentelement){
-    const container = creatediv(parentelement, "container_input_heure")
-
+function create_input_heure_de_cours(parentelement){
+    const container = creatediv(parentelement, "container_input_heure") //Création du conteneur pour les heures
+    //-----Création de la div pour le titre de la partie-----
     const titre = creatediv(container, "titre_heure_de_cours")
     titre.innerText = "Heure de cours"
 
-    const selecteurheuredecours = document.createElement("select")
-    container.appendChild(selecteurheuredecours)
+    const selecteurheuredecours = document.createElement("select") //Création du menu déroulant pour le choix des heures de cours
+    container.appendChild(selecteurheuredecours) //L'ajouter au conteneur
+    //-----Ajout de deux noms de class au selecteur-----
     selecteurheuredecours.classList.add("selecteur")
     selecteurheuredecours.classList.add("inputheuredecours")
-
-    createoption(selecteurheuredecours, "de 8h20 à 9h15")
-    createoption(selecteurheuredecours, "de 9h15 à 10h10")
-    createoption(selecteurheuredecours, "de 10h30 à 11h25")
-    createoption(selecteurheuredecours, "de 11h25 à 12h20")
-    createoption(selecteurheuredecours, "de 12h20 à 13h15")
-    createoption(selecteurheuredecours, "de 13h15 à 14h10")
-    createoption(selecteurheuredecours, "de 14h10 à 15h05")
-    createoption(selecteurheuredecours, "de 15h05 à 16h00")
-    createoption(selecteurheuredecours, "de 16h15 à 17h10")
-    createoption(selecteurheuredecours, "de 17h10 à 18h05")
-
+    //-----Ajout des boutons pour la séléction des étages-----
+    for  (i = 0; i < 11; i++){
+        createoption(selecteurheuredecours, "de " + ListeHeures[i] + " à " + ListeHeures[i+1])
+    }
     //suivre le deuxième tuto, pour faire pas mal de trucs
 }
 
-function createetageinput(parentelement){
-    const container = creatediv(parentelement, "container_etage_salle_input")
-
+function create_etage_input(parentelement){
+    const container = creatediv(parentelement, "container_etage_salle_input") //Création du conteneur pour les étages
+    //-----Création de la div pour le titre de la partie-----
     const titre = creatediv(container, "etages_titre")
     titre.innerText = "Etage"
 
-    const selecteurheuredecours = document.createElement("select")
-    container.appendChild(selecteurheuredecours)
-    selecteurheuredecours.classList.add("selecteur")
-    selecteurheuredecours.classList.add("input_etage")
-
-    createoption(selecteurheuredecours, "1")
-    createoption(selecteurheuredecours, "2")
-    createoption(selecteurheuredecours, "3")
-    createoption(selecteurheuredecours, "4")
-    createoption(selecteurheuredecours, "5")  
+    const selecteur_etage_cours = document.createElement("select") //Création du menu déroulant pour le choix des étages de cours
+    container.appendChild(selecteur_etage_cours) //L'ajouter au conteneur
+    //-----Ajout de deux noms de class au selecteur-----
+    selecteur_etage_cours.classList.add("selecteur")
+    selecteur_etage_cours.classList.add("input_etage")
+    //-----Ajout des boutons pour la séléction des étages-----
+    for (i = 1; i <= 5; i++){
+        createoption(selecteur_etage_cours, String(i))
+    }
 
 }
 
@@ -850,16 +789,16 @@ function creerlayoutrecherche(parentelement){
 
     } else if (textetitreactuel == "Salle à un temps précis"){
 
-       const heuredecours = createinputheuredecours(parentelement)
+       const heuredecours = create_input_heure_de_cours(parentelement)
        const dateinput = createdateinput(parentelement)
        const recherchebutton = createrecherchebutton(parentelement)
        //ici, on peut gérer le style plus simplement
 
     } else if (textetitreactuel == "Salles par étages"){
 
-        const heuredecours = createinputheuredecours(parentelement)
+        const heuredecours = create_input_heure_de_cours(parentelement)
         const dateinput = createdateinput(parentelement)
-        const etageinput = createetageinput(parentelement)
+        const etageinput = create_etage_input(parentelement)
         const recherchebutton = createrecherchebutton(parentelement)
         //ici, on peut gérer le style beaucoup plus simplement
 
@@ -997,30 +936,31 @@ function glissersurladroiterecherche(){
 //--------------------------------LA REPONSE FOIREUSE CÔTE SERVEUR DE LA RECHERCHE-----------------------------------------
 
 
-
+//-----Affichage du planing d'une salle-----
 function creerlayoutplanningsalle(parentelement){
-
-
-    //degager les anciens container
-    const possiblecontainer = document.getElementsByClassName("container_planning_salle")
-    if (possiblecontainer.length >0){
+    //-----Supprimer les anciens container-----
+    const possiblecontainer = document.getElementsByClassName("container_planning_salle") //Récupérer l'élément qui se nomme --> container_planning_salle
+    //-----Suppression de l'élément si il est présent-----
+    if (possiblecontainer.length > 0){
         possiblecontainer[0].remove()
     }
 
-    //créer notre beau layout
-    const container = creatediv(parentelement, "container_planning_salle")
-    const nomsalle = document.getElementsByClassName("inputnomdelasalle")[0].value
-    const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ")
+    //-----Création du nouveau layout avec toutes les informations-----
+    const container = creatediv(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
+    const nom_salle = document.getElementsByClassName("inputnomdelasalle")[0].value //Récupération du nom de la salle avec le selecteur
+    const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ") //Récupération de la date
 
     const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
-    const paireimpaires = paireimpaire(date)
-    const jour = joursemaine(date)
-    
-    const salle = findsalle(nomsalle)
-    const arrayatrier = salle.planning[jour]
-    let newarray = []
 
-    if (paireimpaires == "A"){
+    const paireimpaires = paireimpaire(date) //Récupérer la semaine en question (A ou B)
+    const jour = joursemaine(date) //Récupérer le jour de la semaine
+    
+    const salle = findsalle(nom_salle) //Récupération de toutes les informations de la salle concerné
+    const arrayatrier = salle.planning[jour] //Récupération de toutes les informations du calendrier de la journée
+    
+    let newarray = []
+    //-----Ecrire correctement en fonction des semaines l'emploi du temps dans la liste --> newarray-----
+    if (paireimpaires == "A"){ //Si on est en semaine A
         for (let i =0; i<arrayatrier.length; i++){
             if (arrayatrier[i] == 0 || arrayatrier[i] == 6){
                 newarray.push(0)
@@ -1038,31 +978,41 @@ function creerlayoutplanningsalle(parentelement){
         }
     }
 
-
+    //-----Ajout des éléments à la page-----
     for (let i = 0; i<newarray.length; i++){
-        if (newarray[i]==0){
+        if (newarray[i] == 0){ //Si la salle est libre
             const container_heure = creatediv(container, "container_planning")
             const horaire = creatediv(container_heure, "horaire")
             horaire.innerText = ListeHeures[i]
-            creatediv(container_heure, "vert")
-        } else if (newarray[i]== 1){
+            horaire.style.fontSize = "25px"
+            const parent_text = creatediv(container_heure, "vert")
+            parent_text.style.width = "100%"
+            parent_text.style.left = "20px"
+            parent_text.style.position = "relative"
+        } else if (newarray[i] == 1){ //Si la salle est prise
             const container_heure = creatediv(container, "container_planning")
             const horaire = creatediv(container_heure, "horaire")
             horaire.innerText = ListeHeures[i]
-            creatediv(container_heure, "rouge")
+            horaire.style.fontSize = "25px"
+            const parent_text = creatediv(container_heure, "rouge")
+            parent_text.style.width = "100%"
+            parent_text.style.left = "20px"
+            parent_text.style.position = "relative"
         }
     }
 
 }
 
+//-----Affichage de toutes les salles disponibles à une heure précise-----
 function creerlayoutsallestempsprecis(parentelement){
     const possiblecontainer = document.getElementsByClassName("container_salles_temps_precis")
     if (possiblecontainer.length >0){
         possiblecontainer[0].remove()
     }
     const container = creatediv(parentelement, "container_salles_temps_precis")
-    
     const heuredecours = heuredecoursfonctionstring(document.getElementsByClassName("inputheuredecours")[0].value)
+    console.log("lol caca : "+heuredecours)
+
     const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ")
     const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
 
@@ -1073,7 +1023,7 @@ function creerlayoutsallestempsprecis(parentelement){
     }
 }
 
-
+//-----Affichage de toutes les salles disponibles à une heure précise à un étage précis-----
 function creerlayoutsallesfonctionetage(parentelement){
     const possiblecontainer = document.getElementsByClassName("container_salles_fonction_etage")
     if (possiblecontainer.length >0){
@@ -1101,12 +1051,15 @@ function creerlayoutsallesfonctionetage(parentelement){
 }
 
 
-
+//-----Fonction qui met à jour les informations quand le bouton de recherche est pressé | Voir fonction createrecherchebutton-----
 function recherchelayout(parentelement){
+    //-----Afficher le planing d'une salle-----
     if (textetitreactuel == "Planning d'une salle"){
         creerlayoutplanningsalle(parentelement)
+    //-----Afficher le planing d'une salle à un temps précis-----
     } else if (textetitreactuel == "Salle à un temps précis"){
         creerlayoutsallestempsprecis(parentelement)
+    //-----Afficher le planing de toutes les salles libres à un étage-----
     } else if (textetitreactuel == "Salles par étages"){
         creerlayoutsallesfonctionetage(parentelement)
     }
@@ -1115,7 +1068,7 @@ function recherchelayout(parentelement){
 //-------------------------------------------------EVENT LISTENER-----------------------------------------------------------
 
 //initialisation des heures proprement
-const ListeHeures = ["8h20", "9h15", "10h30", "11h25", "12h20", "13h15", "14h10", "15h05", "16h15", "17h10"]
+const ListeHeures = ["08h20", "09h15", "10h30", "11h25", "12h20", "13h15", "14h10", "15h05", "16h15", "17h10", "18h05", "19h00"]
 
 //ajout des event listener, pour que ce soit dynamique quand on clique
 
