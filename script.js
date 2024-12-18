@@ -604,6 +604,7 @@ function creerlayoutsallemodel(salle, parentelement){
     //création de la div contenu, et de l'imagecontainer
     let divcontenu = creatediv(parentelement, "SalleModel")
 
+
     //création de l'image container, pour pouvoir le modifier plus facilement
     let divimagecontainer = creatediv(divcontenu, "SalleModel_image_container")
     divimagecontainer.style.height = `${divcontenu.offsetHeight-20}px`
@@ -622,13 +623,18 @@ function creerlayoutsallemodel(salle, parentelement){
     divimagecontainer.appendChild(divimage)
     divimage.classList.add("SalleModel_image")
     divimage.src = `images/${salle.image}.jpg`
-
+    console.log(parseInt(divimagecontainer.style.height) + 10)
     //insertion de la description
     let divdescription = creatediv(divcontenu, "SalleModel_description")
+    divdescription.style.height = `${parseInt(divimagecontainer.style.height) - 20}px`
+    divdescription.style.overflow = "scroll"
+    divdescription.style.backgroundColor = "rgba(199, 199, 199, 0.3)"
+    divdescription.style.borderWidth = 'thick'
     divdescription.innerHTML = salle.description
     divdescription.style.left = divtitre.style.left
     divdescription.style.top = `${divtitre.offsetHeight +10}px`
     divdescription.style.width = `${divcontenu.offsetWidth - divimagecontainer.offsetWidth -30}px`
+    
 }
 
 //----------------------------------------------CODE DE LA PAGE ET DES LAYOUT-----------------------------------------------
@@ -949,9 +955,9 @@ function creerlayoutplanningsalle(parentelement){
     const container = creatediv(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
     const nom_salle = document.getElementsByClassName("inputnomdelasalle")[0].value //Récupération du nom de la salle avec le selecteur
     const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ") //Récupération de la date
-
+    
     const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
-
+    
     const paireimpaires = paireimpaire(date) //Récupérer la semaine en question (A ou B)
     const jour = joursemaine(date) //Récupérer le jour de la semaine
     
@@ -977,7 +983,7 @@ function creerlayoutplanningsalle(parentelement){
             }
         }
     }
-
+    
     //-----Ajout des éléments à la page-----
     for (let i = 0; i<newarray.length; i++){
         if (newarray[i] == 0){ //Si la salle est libre
@@ -1044,7 +1050,7 @@ function creerlayoutsallesfonctionetage(parentelement){
             sallestriees.push(sallesdisponibles[i])        
         }
     }
-
+    
     for (let i = 0; i<sallestriees.length; i++){
         creerlayoutsallemodel(sallestriees[i], container)
     }
