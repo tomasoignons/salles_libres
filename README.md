@@ -2,7 +2,7 @@
 
 ## Petit guide d'utilisation simpliste
 
-Tout est stocké dans un énorme objet dans le script.js, concrêtement, le 1 veut dire occupé, le 0 libre, le 4 occupé en semaine A, et le 6 occupé en semaine B (de mémoiire, entre le 4 et le 6 faudrait vérifier je suis plus sur)
+Tout est stocké dans un énorme objet dans le script.js, concrêtement, le 1 veut dire occupé, le 0 libre, le 6 occupé en semaine A, et le 4 occupé en semaine B
 
 Il y a une date limite sur la partie recherche, qu'il faut changer chaque année
 
