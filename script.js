@@ -148,7 +148,7 @@ function resetSalleList (){
         new Sallemodel(
             "GF32",
             "Salle avec une mauvaise accoustique. Ne pas oublier le doliprane.",
-            "Pendant l'année 2023/2024, c'était là où c'est déroulé le cours le plus goatesque de tous les temps avec M.Masselin et la théorie du tout.",
+            "Pendant l'année 2023/2024, c'était là où c'est déroulé le cours le plus goatesque de tous les temps avec M.Masselin, M.Lacroix et la théorie du tout.",
             "GF32",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      0,      0,      1,      0,      1,      0], //Lundi
@@ -510,7 +510,7 @@ function numeroheuredecours(heuredonnee){
 
 //-----Connaitre un jour de la semaine pour une date donnée | Les jours de la semaines sont : Dimanche = 0; Lundi = 1; Mardi = 2; Mercredi = 3; Jeudi = 4; Vendredi = 5; Samedi = 6-----
 function joursemaine(date){
-    let date_find = new Date(date[2],date[1]-1,date[0]) //Initialisation de la date à la date choisi par l'utilisateur
+    let date_find = new Date(date[2],date[1],date[0]) //Initialisation de la date à la date choisi par l'utilisateur
     let joursemaine = date_find.getDay() - 1
     
     if (joursemaine < 0){
@@ -529,8 +529,8 @@ function heureapres(heure){
 }
 //-----Récupérer le nom du mois en fonction de sa position dans l'année-----
 function moisenfonctionnom(mois){
-    let _mois = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novrembre", "Décembre"]
-    return _mois[mois]
+    let _mois = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    return _mois.indexOf(mois)
 }
 
 //-----Récupération de l'heure de la salle-----
@@ -572,6 +572,7 @@ function sallesdispo(date, heure){
     return (sallesdisponibles)
 }
 
+
 //-----------------trouver une salle et en renvoyer le sallemodel-------------------
 
 function findsalle(sallename){
@@ -589,7 +590,9 @@ function findsalle(sallename){
 function creatediv(elementparent, classname){
     const div = document.createElement("div") //Création d'un élément | type -> div
     elementparent.appendChild(div) //Attaché l'élement crée div à un parent qui est argument
-    div.classList.add(classname) //Ajouter une class à l'élément div crée
+    if (classname != "") {
+        div.classList.add(classname) //Ajouter une class à l'élément div crée
+    }
     return(div)
 }
 
@@ -615,7 +618,17 @@ function creerlayoutsallemodel(salle, parentelement){
 
     //-----Insertion de l'image-----
     let divimage = document.createElement("img") //Création de la div pour l'image
-    divimagecontainer.appendChild(divimage) //Mettre l'image en enfant du conteneur de l'image
+    let get_more_information_image = document.createElement("button") //Création d'un lien qui est clickable dans l'image
+    //-----Apparance du button pour l'image-----
+    get_more_information_image.style.appearance = "none";
+    get_more_information_image.style.border = "none";
+    get_more_information_image.style.cursor = "pointer";
+    get_more_information_image.style.BackgroundColor = "inherit"
+    get_more_information_image.setAttribute("class", salle.name);
+    get_more_information_image.onclick = function(){More_Information_Salle(get_more_information_image.classList)}
+
+    divimagecontainer.appendChild(get_more_information_image)
+    get_more_information_image.appendChild(divimage) //Mettre l'image en enfant du conteneur de l'image
     divimage.classList.add("SalleModel_image") //Ajout d'une class à la div de l'image
     divimage.src = `images/${salle.image}.jpg` //Récupération de l'image du côté serveur
 
@@ -951,13 +964,14 @@ function creerlayoutplanningsalle(parentelement){
     const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ") //Récupération de la date
     
     const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
+    console.log(date)
     
     const paireimpaires = paireimpaire(date) //Récupérer la semaine en question (A ou B)
     const jour = joursemaine(date) //Récupérer le jour de la semaine
-    
+
     const salle = findsalle(nom_salle) //Récupération de toutes les informations de la salle concerné
     const arrayatrier = salle.planning[jour] //Récupération de toutes les informations du calendrier de la journée
-    
+
     let newarray = []
     //-----Ecrire correctement en fonction des semaines l'emploi du temps dans la liste --> newarray-----
     if (paireimpaires == "A"){ //Si on est en semaine A
@@ -1011,7 +1025,6 @@ function creerlayoutsallestempsprecis(parentelement){
     }
     const container = creatediv(parentelement, "container_salles_temps_precis")
     const heuredecours = heuredecoursfonctionstring(document.getElementsByClassName("inputheuredecours")[0].value)
-    console.log("lol caca : "+heuredecours)
 
     const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ")
     const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
@@ -1081,3 +1094,183 @@ const flechegauche = document.getElementById("flechegauche")
 
 flechedroite.addEventListener('click', glissersurladroiterecherche, false);
 flechegauche.addEventListener('click', glissersurlagaucherecherche, false);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#close_information_compost').addEventListener('click', function() {
+        document.querySelector('#information_supplemantaire').style.display = "none";
+    });
+    document.querySelector('#information_supplemantaire').style.display = "none";
+});
+
+function More_Information_Salle(item) {
+    document.querySelector('#information_supplemantaire').style.display = "block";
+    let div_image_container = document.getElementById("img_salle")
+    div_image_container.innerHTML = ""
+    
+    let div_image = document.createElement("img") //Création de la div pour l'image
+    div_image_container.appendChild(div_image)
+    div_image.classList.add("image-left") //Ajout d'une class à la div de l'image
+    
+    div_image.src = `images/grosses_images/${String(item).toLowerCase()}.jpg`
+
+    let div_info_container = document.getElementById("information_salle_gauche")
+    div_info_container.innerHTML = ""
+    
+    let get_element_salle = findsalle(item)
+    
+    Information_Note(div_info_container, get_element_salle)
+    //-----En travail-----
+    //Information_Disponibilite(div_info_container, get_element_salle)
+    //Information_Duree(div_info_container, get_element_salle)
+
+    div_info_container = document.getElementById("description_salle")
+    div_info_container.innerHTML = ""
+
+    Description_Objective(div_info_container, get_element_salle)
+    Description_Subjective(div_info_container, get_element_salle)
+    
+    div_info_container = document.getElementById("emploi-temps-salle-more")
+    div_info_container.innerHTML = ""
+
+    Emploi_Du_Temps_More(div_info_container, get_element_salle, )
+}
+
+//-----A factoriser pour plus de simplicité-----
+function Information_Note(div_info_container, _salle) {
+    fr_div = creatediv(div_info_container, "")
+    let element = document.createElement("h2") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element.innerHTML  = "Note" //Ajout d'une class à la div de l'image
+    element = document.createElement("br") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element = document.createElement("p") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element.innerHTML  = _salle.note //Ajout d'une class à la div de l'image
+}
+
+function Information_Disponibilite(div_info_container, _salle) {
+    fr_div = creatediv(div_info_container, "")
+    element = document.createElement("h2") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element.innerHTML  = "Disponibilité" //Ajout d'une class à la div de l'image
+    element = document.createElement("br") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element = document.createElement("p") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    if (_salle.disponibilite == false) {
+        element.innerHTML  = "Salle occupée" //Ajout d'une class à la div de l'image
+    }
+    else {
+        element.innerHTML  = "Salle Libre" //Ajout d'une class à la div de l'image
+    }
+}
+
+function Information_Duree(div_info_container, _salle) {
+    fr_div = creatediv(div_info_container, "")
+    element = document.createElement("h2") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element.innerHTML  = "Durée restante" //Ajout d'une class à la div de l'image
+    element = document.createElement("br") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element = document.createElement("p") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element.innerHTML  = _salle.temps //Ajout d'une class à la div de l'image
+}
+
+function Description_Objective(div_info_container, _salle) {
+    fr_div = creatediv(div_info_container, "")
+    fr_div.classList.add("text1")
+    element = document.createElement("h2") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element.innerHTML  = "Déscription de la salle" //Ajout d'une class à la div de l'image
+    element = document.createElement("br") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element = document.createElement("p") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element.innerHTML  = _salle.description //Ajout d'une class à la div de l'image
+}
+
+function Description_Subjective(div_info_container, _salle) {
+    fr_div = creatediv(div_info_container, "")
+    fr_div.classList.add("text2")
+    element = document.createElement("h2") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element.innerHTML  = "Déscription de l'ambiance" //Ajout d'une class à la div de l'image
+    element = document.createElement("br") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element = document.createElement("p") //Création de la div pour l'image
+    fr_div.appendChild(element)
+    element.innerHTML  = _salle.reference //Ajout d'une class à la div de l'image
+}
+
+function Emploi_Du_Temps_More(parentelement, salle) {
+
+    //-----Création du nouveau layout avec toutes les informations-----
+    const container = creatediv(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
+    const datedegueu = new Date()
+    const date = [parseInt(datedegueu.getDate()), parseInt(datedegueu.getMonth()), parseInt(datedegueu.getFullYear())]
+    console.log(datedegueu.getMonth())
+    
+    const paireimpaires = paireimpaire(date) //Récupérer la semaine en question (A ou B)
+    const jour = joursemaine(date) //Récupérer le jour de la semaine
+
+    const arrayatrier = salle.planning[jour] //Récupération de toutes les informations du calendrier de la journée
+    console.log(date, paireimpaires, jour, salle, arrayatrier)
+    
+    let newarray = []
+    //-----Ecrire correctement en fonction des semaines l'emploi du temps dans la liste --> newarray-----
+    if (paireimpaires == "A"){ //Si on est en semaine A
+        for (let i =0; i<arrayatrier.length; i++){
+            if (arrayatrier[i] == 0 || arrayatrier[i] == 6){
+                newarray.push(0)
+            } else {
+                newarray.push(1)
+            }
+        }
+    } else if (paireimpaires == "B"){
+        for (let i =0; i<arrayatrier.length; i++){
+            if (arrayatrier[i] == 0 || arrayatrier[i] == 4){
+                newarray.push(0)
+            } else {
+                newarray.push(1)
+            }
+        }
+    }
+    
+    //-----Ajout des éléments à la page-----
+    for (let i = 0; i<newarray.length; i++){
+        if (newarray[i] == 0){ //Si la salle est libre
+            const container_heure = creatediv(container, "container_planning")
+            const horaire = creatediv(container_heure, "horaire")
+            horaire.innerText = ListeHeures[i]
+            horaire.style.fontSize = "25px"
+            const parent_text = creatediv(container_heure, "vert")
+            parent_text.style.width = "100%"
+            parent_text.style.left = "20px"
+            parent_text.style.position = "relative"
+        } else if (newarray[i] == 1){ //Si la salle est prise
+            const container_heure = creatediv(container, "container_planning")
+            const horaire = creatediv(container_heure, "horaire")
+            horaire.innerText = ListeHeures[i]
+            horaire.style.fontSize = "25px"
+            const parent_text = creatediv(container_heure, "rouge")
+            parent_text.style.width = "100%"
+            parent_text.style.left = "20px"
+            parent_text.style.position = "relative"
+        }
+    }
+
+}
+
+function Calcul_Temps_Restant(_salle) {
+    let temps_restant = ""
+    const datedegueu = new Date()
+    
+
+    if (_salle.disponibilite == false) {
+        return "Plus de templs, salle indisponible"
+    }
+
+
+}

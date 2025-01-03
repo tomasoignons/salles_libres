@@ -264,6 +264,7 @@ h2{
     margin-top: 10px;
     height: 260px;
     overflow-y : scroll;
+    overflow-x: hidden;
 }
 
 .container_salles_fonction_etage{
@@ -351,4 +352,77 @@ a:hover{
     .contenu {
         width : 90%;
     }
+}
+
+.elementBlanc {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 2px solid black;
+    position: fixed; /* Positionnement fixe pour qu'il reste à la même place dans la fenêtre */
+    top: 0%;       /* Positionné à 20px du haut de la fenêtre */
+    left: 0%;      /* Positionné à 20px de la gauche de la fenêtre */
+    z-index: 10;     /* S'assure que l'élément est au-dessus de tout autre contenu */
+}
+
+
+/* Div gauche */
+.left {
+    width: 50%;            /* Prend 50% de la largeur de la page */
+    display: flex;
+    flex-direction: column;      /* Centre l'image verticalement */
+}
+
+.img-top {
+    height: 50%;            /* Prend 50% de la largeur de la page */
+    display: flex;
+    justify-content: center;  /* Centre l'image horizontalement */
+    align-items: center;
+}
+
+.left .image-left {
+    max-width: 100%;   /* L'image prend toute la largeur de la div sans déborder */
+    max-height: 100%;  /* L'image prend toute la hauteur de la div sans déborder */
+}
+
+/* Div droite */
+.right {
+    width: 50%;              /* Prend 50% de la largeur de la page */
+    display: flex;
+    flex-direction: column;  /* Empile les éléments verticalement */
+}
+
+/* Partie du haut (deux div avec du texte collées l'une à côté de l'autre) */
+.top {
+    display: flex;           /* Les divs sont côte à côte */
+    justify-content: space-between; /* Laisse de l'espace entre les deux divs */
+    flex: 1;                  /* Occupe la moitié de la hauteur de la div droite */
+}
+/*part-bottom-left*/
+.text1, .text2 {
+    flex: 1;                  /* Chaque texte occupe une part égale de l'espace horizontal */
+    padding: 10px;
+    background-color: lightgray; /* Optionnel, pour mieux visualiser */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Partie du bas (image) */
+.bottom {
+    height: 50%;              /* Occupe la moitié restante de la div droite */
+    display: flex;
+    justify-content: center;  /* Centre l'image horizontalement */
+    align-items: center;      /* Centre l'image verticalement */
+    background-color: lightblue; /* Optionnel, pour mieux visualiser */
+}
+
+.bottom .image-bottom {
+    max-width: 100%;  /* L'image prend toute la largeur de la div sans déborder */
+    max-height: 100%; /* L'image prend toute la hauteur de la div sans déborder */
+}
+
+.information_supplemantaire {
+    display: flex;
+    height: 100vh;  /* Hauteur de l'écran pour une disposition complète */
 }
