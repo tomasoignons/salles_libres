@@ -1,13 +1,11 @@
 
 //-----CREATION DE LA MEGA LISTE DE SALLES-----
 
-//Les fonctions d'activations se trouvent aux lignes 650 et 1080
-
 class Sallemodel {
-    constructor (name, description, easter_egg, image, planning, temps, duree, disponibilite, note) {
+    constructor (name, description, reference, image, planning, temps, duree, disponibilite, note) {
         this.name = name, //Nom de la salle
         this.description = description, //Description de la salle
-        this.easter_egg = this.easter_egg
+        this.reference = reference, //Description de la salle
         this.image = image, //Image de référence pour décorer le fond en fonction de salle
         this.planning = planning, //Le planning des horaires de la salle
         this.temps = temps, //A développer
@@ -19,7 +17,7 @@ class Sallemodel {
 
 let SalleList = []
 
-function Reset_Salle_Libre(){
+function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF11",
@@ -38,7 +36,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "19"
+            "19/20"
         )
     )
     SalleList.push(
@@ -59,14 +57,14 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "18"
+            "17,5/20"
         )
     )
     SalleList.push(
         new Sallemodel(
             "GF23",
-            "souvent dispo, souvent pleine de monde. Beaucoup trop bruyante, je déconseille fortement",
-            "à faire",
+            "Souvent dispo. Souvent pleine de monde, trés spatieuse. Beaucoup trop bruyante, je déconseille fortement.",
+            "'Un tyran n'est pas innocent'. 'Député'. Pourquoi il y a de la politique dans cette classe ? On est pas censé être ami ???",
             "GF23",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      0,      1,      1,      4,      0,      0], //Lundi
@@ -101,7 +99,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "20"
+            "16/20"
         )
     )
     SalleList.push(
@@ -122,7 +120,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "14"
+            "10/20"
         )
     )
     SalleList.push(
@@ -143,7 +141,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "17"
+            "0/20"
         )
     )
     SalleList.push(
@@ -164,7 +162,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "15"
+            "13/20"
         )
     )
     SalleList.push(
@@ -185,7 +183,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "13"
+            "18/20"
         )
     )
     SalleList.push(
@@ -206,7 +204,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "14"
+            "18/20"
         )
     )
     SalleList.push(
@@ -227,7 +225,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "12"
+            "17/20"
         )
     )
     SalleList.push(
@@ -248,14 +246,14 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "16"
+            "20/20"
         )
     )
     SalleList.push(
         new Sallemodel(
             "GF43",
-            "salle centrale, domaine des terminales, 1eres passez votre chemin",
-            "à faire",
+            "Salle centrale, domaine des terminales. Beaucoup de bruit, et de click de souris.",
+            "Parfaite pour les joueurs de LOL, ou pour les personnes qui aiment voir du bon gameplay.",
             "GF43",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      0,      0,      6,      1,      1,      1,      0], //Lundi
@@ -269,7 +267,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "17"
+            "18/20"
         )
     )
     SalleList.push(
@@ -290,14 +288,14 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "15"
+            "12/20"
         )
     )
     SalleList.push(
         new Sallemodel(
             "GF45",
-            "les gens y font la sieste, donc viens te joindre à eux !",
-            "à faire",
+            "Petite salle calme où les gens y font la sieste. Viens te joindre à eux !",
+            "Qu'est ce que tu veux raconter sur cette salle où tout le monde dort. On oubli tous nos soucis.",
             "GF45",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      0,      1,      4,      0,      1,      1,      0,      0,      0], //Lundi
@@ -311,7 +309,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "16"
+            "12/20"
         )
     )
     SalleList.push(
@@ -332,7 +330,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "13"
+            "10/20"
         )
     )
     SalleList.push(
@@ -353,7 +351,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "12"
+            "6/20"
         )
     )
     SalleList.push(
@@ -374,7 +372,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "11"
+            "15/20"
         )
     )
     SalleList.push(
@@ -395,7 +393,7 @@ function Reset_Salle_Libre(){
             "0h00m",
             0,
             false,
-            "13"
+            "14/20"
         )
     )
     
@@ -414,24 +412,25 @@ function Heure(){
 };
 
 //-----Récupérer la date d'aujourd'hui sous la forme d'une liste-----
-function Date_Today(){
+function FonctionDate(){
     const dateactuelle = new Date();
     date = [dateactuelle.getDate(), dateactuelle.getMonth(), dateactuelle.getFullYear()]
     return(date)
 }
 
 //-----Obtenir le numero de la semaine-----
-function Numero_Semaine(date){
-    const dateactuelle = new Date(date[2], date[1], date[0]); //Récupération de la date actuelle
+function numerosemaine(date){
+    const dateactuelle = new Date(date[2], date[1]-1, date[0]); //Récupération de la date actuelle
     const oneJan = new Date(dateactuelle.getFullYear(),0,1); //Récupération de la date du 1 janvier
     let numberOfDays = Math.floor((dateactuelle - oneJan) / (24 * 60 * 60 * 1000));
     let numerosemaine = Math.ceil(( dateactuelle.getDay() + 1 + numberOfDays) / 7);
     return(numerosemaine)
 }
 
-//-----Obtenir la parité d'une semaine (A ou B)-----
-function Parite_Semaine(date){
-    let paireimpaire = Numero_Semaine(date)%2
+//savoir si une date est dans une semaine paire ou impaire
+//probaabilité importante qu'il y ait un truc qui merde ici lol
+function paireimpaire(date){
+    let paireimpaire = numerosemaine(date)%2
     if (paireimpaire == 0){
         return ("A")
     } else if (paireimpaire == 1){
@@ -439,12 +438,12 @@ function Parite_Semaine(date){
     }
 }
 
-//-----Connaitre l'heure (entre 0 = 8h20 et 10 = 18h05)-----
-function Heure_Cours(heuredonnee){
+//savoir à quelle heure on est (entre 0 et 10)
+function numeroheuredecours(heuredonnee){
 
     let heure = heuredonnee[0]
     let minute = heuredonnee[1]
-
+    
     if(heure == 8){
         return (0)
     } else if (heure == 9){
@@ -510,7 +509,7 @@ function Heure_Cours(heuredonnee){
 
 
 //-----Connaitre un jour de la semaine pour une date donnée | Les jours de la semaines sont : Dimanche = 0; Lundi = 1; Mardi = 2; Mercredi = 3; Jeudi = 4; Vendredi = 5; Samedi = 6-----
-function Jour_Semaine(date){
+function joursemaine(date){
     let date_find = new Date(date[2],date[1],date[0]) //Initialisation de la date à la date choisi par l'utilisateur
     let joursemaine = date_find.getDay() - 1
     
@@ -522,41 +521,48 @@ function Jour_Semaine(date){
 }
 
 //-----Obtenir la prochaine heure de début de cours-----
-function Heure_Suivante(heure){
+function heureapres(heure){
     let temps = heure[0]*60 + heure[1] + 55; //Convertion du temps en minute en rajoutant 55 minutes
     let minutes = temps%60 //Récupération des heures pour la prochaine heure
     let Heureapres = (temps-minutes)/60 //Récupération des minutes pour la prochaine heure
     return([Heureapres, minutes])
 }
-
-function Mois_Nom(mois){
+//-----Récupérer le nom du mois en fonction de sa position dans l'année-----
+function moisenfonctionnom(mois){
     let _mois = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     return _mois.indexOf(mois)
 }
 
-function Heure_Cours_String(heuredecours){
+//-----Récupération de l'heure de la salle-----
+function heuredecoursfonctionstring(heuredecours){
     return ListeHeures.indexOf(heuredecours.split(" ")[1])
 }
 //-----------------------------------------------GERER LES DIFFERENTES SALLES DISPONIBLES---------------------------------------------------
 
-
-function Salles_Disponibles(date, heure){
-    jour = Jour_Semaine(date)
-    paire = Parite_Semaine(date)
+//-----Savoir les salles disponibles à une certaine heure-----
+function sallesdispo(date, heure){
+    jour = joursemaine(date) //Récupérer le jour de la semaine
+    paire = paireimpaire(date) //Savoir le type de la semaine
+    //-----Si il n'y a pas d'heure de défini-----
     if (heure == undefined){
         heure = 0
     }
     if (heure[1] !== undefined){
-        heure = Heure_Cours(heure)
+        heure = numeroheuredecours(heure)
     }
+    console.log("heure : ", heure)
     let sallesdisponibles = []
     if (heure == 30){
         return(sallesdisponibles)
     }
+    console.log("paire : ", paire)
     if (paire == "A"){
+        console.log("ok")
         for (let i = 0; i < SalleList.length; i++) {
+            console.log(SalleList[i].planning, jour, heure);
 
             if (SalleList[i].planning[jour][heure] == 0 || SalleList[i].planning[jour][heure] == 6){
+                console.log("lol");
                 sallesdisponibles.push(SalleList[i]);
             }
         }
@@ -573,7 +579,7 @@ function Salles_Disponibles(date, heure){
 
 //-----------------trouver une salle et en renvoyer le sallemodel-------------------
 
-function Trouver_Salle(sallename){
+function findsalle(sallename){
     for (let i = 0; i<SalleList.length; i++){
         if (SalleList[i].name == sallename){
             return(SalleList[i])
@@ -585,7 +591,7 @@ function Trouver_Salle(sallename){
 //-------------------------------------FONCTIONS DE CREATION D'ELEMENTS AVEC LES SALLES MODELS------------------------
 
 //mega fonction pour juste créer une div avec un élément parent précis, et une classname logique
-function Creation_Div(elementparent, classname){
+function creatediv(elementparent, classname){
     const div = document.createElement("div") //Création d'un élément | type -> div
     elementparent.appendChild(div) //Attaché l'élement crée div à un parent qui est argument
     if (classname != "") {
@@ -598,21 +604,21 @@ function Creation_Div(elementparent, classname){
 
 function creerlayoutsallemodel(salle, parentelement){
 
-    //création de la div contenu, et de l'imagecontainer
-    let divcontenu = Creation_Div(parentelement, "Salle-Model")
+    let div_contenu = creatediv(parentelement, "SalleModel") //Création de la div pour le contenu et le conteneur de l'image
 
-    //création de l'image container, pour pouvoir le modifier plus facilement
-    let divimagecontainer = Creation_Div(divcontenu, "Salle-Model-image-container")
-    divimagecontainer.style.height = `${divcontenu.offsetHeight-20}px`
-    divimagecontainer.style.left  = divcontenu.style.paddingLeft
-    divimagecontainer.style.top = divcontenu.style.paddingTop
-    divimagecontainer.style.width = divimagecontainer.style.height
 
-    //insertion du titre
-    let divtitre = Creation_Div(divcontenu, "Salle-Model-titre")
-    divtitre.innerText = salle.name
-    divtitre.style.top = divcontenu.style.paddingTop;
-    divtitre.style.left = `${divimagecontainer.offsetWidth+20}px`
+    //-----Création du conteneur de l'image-----
+    let divimagecontainer = creatediv(div_contenu, "SalleModel_image_container") //Création de la div pour l'image
+    divimagecontainer.style.height = `${div_contenu.offsetHeight-20}px` //Définir la taille de l'image en fonction de la taille de la div de contenu
+    divimagecontainer.style.left  = div_contenu.style.paddingLeft //Décaler l'image de quelque pixel vers la droite par rapport à la gauche de la div
+    divimagecontainer.style.top = div_contenu.style.paddingTop //Décaler l'image de quelque pixel vers le bas par rapport au haut de la div
+    divimagecontainer.style.width = divimagecontainer.style.height //Faire en sorte que l'image soit carré
+
+    //-----Insertion du titre-----
+    let divtitre = creatediv(div_contenu, "SalleModel_titre") //Création de la div pour le titre
+    divtitre.innerText = salle.name //Définir le du titre 
+    divtitre.style.top = div_contenu.style.paddingTop; //Décaler le titre de quelque pixel vers le bas par rapport au haut de la div
+    divtitre.style.left = `${divimagecontainer.offsetWidth+20}px` //Décaler le titre de quelque pixel vers la droite par rapport à la gauche de l'image
 
     //-----Insertion de l'image-----
     let divimage = document.createElement("img") //Création de la div pour l'image
@@ -627,43 +633,54 @@ function creerlayoutsallemodel(salle, parentelement){
 
     divimagecontainer.appendChild(get_more_information_image)
     get_more_information_image.appendChild(divimage) //Mettre l'image en enfant du conteneur de l'image
-    divimage.classList.add("Salle-Model-image") //Ajout d'une class à la div de l'image
+    divimage.classList.add("SalleModel_image") //Ajout d'une class à la div de l'image
     divimage.src = `images/${salle.image}.jpg` //Récupération de l'image du côté serveur
 
     //-----Insertion de la description-----
-    let divdescription = Creation_Div(divcontenu, "Salle-Model-description") //Création de la div pour la description de la salle
+    let divdescription = creatediv(div_contenu, "SalleModel_description") //Création de la div pour la description de la salle
     divdescription.style.height = `${parseInt(divimagecontainer.style.height) - 20}px` //Initialisation de la hauteur de la description
     divdescription.style.overflowY = "scroll" //Ajout d'une barre de défilement pour l'overflox sur la hauteur
     divdescription.style.backgroundColor = "rgba(199, 199, 199, 0.3)" //Changement de la texture d'arrière plan pour la description
     divdescription.innerHTML = salle.description //Initialisation de la description de salle
     divdescription.style.left = divtitre.style.left //Décaler l'image de quelque pixel vers la droite par rapport à la gauche de l'image
     divdescription.style.top = `${divtitre.offsetHeight +10}px` //Décaler le titre de quelque pixel vers le bas par rapport au haut de la div
-    divdescription.style.width = `${divcontenu.offsetWidth - divimagecontainer.offsetWidth -30}px` //Initialisation de la largeur de la description
+    divdescription.style.width = `${div_contenu.offsetWidth - divimagecontainer.offsetWidth -30}px` //Initialisation de la largeur de la description
     
 }
 
 //----------------------------------------------CODE DE LA PAGE ET DES LAYOUT-----------------------------------------------
-Reset_Salle_Libre()
+resetSalleList()
+
+
 
 const carousselmaintenant = document.getElementById("contenu_maintenant")
-const carousselheureapres = document.getElementById("contenu_prochaine_heure")
+const carousselheureapres = document.getElementById("contenu_prochaineheure")
 
 //-----Remplir le caroussel des horraires des salles disponibles maintenant-----
-const dateajd = Date_Today()
+const dateajd = FonctionDate()
 const heureactuelle = Heure()
-const sallesdisponibles = Salles_Disponibles(dateajd, heureactuelle)
+const sallesdisponibles = sallesdispo(dateajd, heureactuelle)
+console.log(sallesdisponibles)
 
 for (let i = 0; i<sallesdisponibles.length; i++){
     creerlayoutsallemodel(sallesdisponibles[i], carousselmaintenant)
 }
 //remplir le caroussel heuresuivante
-const Heureapres = Heure_Suivante(heureactuelle)
-const sallesdispoheureapres = Salles_Disponibles(dateajd, Heureapres)
+const Heureapres = heureapres(heureactuelle)
+const sallesdispoheureapres = sallesdispo(dateajd, Heureapres)
 
 for (let i = 0; i<sallesdispoheureapres.length; i++){
     creerlayoutsallemodel(sallesdispoheureapres[i], carousselheureapres)
 }
 //------------------------------------------CODE DU LAYOUT DE RECHERCHE---------------------------------------------------------
+
+
+//fonction pour créer une div sur la page, l'assigner à un élément parent, et lui mettre une classname
+
+
+
+
+
 
 //initialisation du titre fait de manière propre et clean pour laisser des possibilités de modification dans le futur
 const listtitrespossibles = ["Planning d'une salle", "Salle à un temps précis", "Salles par étages"]
@@ -685,8 +702,8 @@ function createoption(parentelement, nomoption){
 
 function createnomdelasalle(parentelement){
 
-    const container = Creation_Div(parentelement, "container_nom_salle")
-    const titre = Creation_Div(container, "titre_nom_de_la_salle")
+    const container = creatediv(parentelement, "container_nom_salle")
+    const titre = creatediv(container, "titre_nom_de_la_salle")
     titre.innerText = "Nom de la salle"
 
     const selecteurnomdelasalle = document.createElement("select")
@@ -703,8 +720,8 @@ function createnomdelasalle(parentelement){
 
 function createdateinput(parentelement){
 
-    const container = Creation_Div(parentelement, "container_date_salle")
-    const titre = Creation_Div(container, "titre_date_recherche")
+    const container = creatediv(parentelement, "container_date_salle")
+    const titre = creatediv(container, "titre_date_recherche")
     titre.innerText = "Choisir la date"
 
     const inputdate = document.createElement("input")
@@ -731,7 +748,7 @@ function createdateinput(parentelement){
 
 //-----Fonction essentiel car elle gère la création du bouton sur la page et lui permet de fonctionner-----
 function createrecherchebutton(parentelement){
-    const container = Creation_Div(parentelement, "container_button")
+    const container = creatediv(parentelement, "container_button")
     const button = document.createElement("button") //Création d'un élément | type --> button
     container.appendChild(button) //Attaché l'élement crée button à un parent qui est le container crée juste au-dessus
     button.classList.add("button_research") //Ajouter une class à l'élément div crée
@@ -744,9 +761,9 @@ function createrecherchebutton(parentelement){
 }
 
 function create_input_heure_de_cours(parentelement){
-    const container = Creation_Div(parentelement, "container_input_heure") //Création du conteneur pour les heures
+    const container = creatediv(parentelement, "container_input_heure") //Création du conteneur pour les heures
     //-----Création de la div pour le titre de la partie-----
-    const titre = Creation_Div(container, "titre_heure_de_cours")
+    const titre = creatediv(container, "titre_heure_de_cours")
     titre.innerText = "Heure de cours"
 
     const selecteurheuredecours = document.createElement("select") //Création du menu déroulant pour le choix des heures de cours
@@ -762,9 +779,9 @@ function create_input_heure_de_cours(parentelement){
 }
 
 function create_etage_input(parentelement){
-    const container = Creation_Div(parentelement, "container_etage_salle_input") //Création du conteneur pour les étages
+    const container = creatediv(parentelement, "container_etage_salle_input") //Création du conteneur pour les étages
     //-----Création de la div pour le titre de la partie-----
-    const titre = Creation_Div(container, "etages_titre")
+    const titre = creatediv(container, "etages_titre")
     titre.innerText = "Etage"
 
     const selecteur_etage_cours = document.createElement("select") //Création du menu déroulant pour le choix des étages de cours
@@ -885,7 +902,7 @@ function glissersurlagaucherecherche(){
     //content de tout ce qui sert
     const slider = document.getElementById("user_research")
     const titreactuel = document.getElementById("researchtitle")
-    const nouveautitre = Creation_Div(slider, "researchtitle")
+    const nouveautitre = creatediv(slider, "researchtitle")
 
     nouveautitre.innerText = nouveautitretexte("gauche")
     glissersurlagauche(slider, titreactuel, nouveautitre, "relative")
@@ -894,7 +911,7 @@ function glissersurlagaucherecherche(){
     //layout du contenu de la recherche
     const contenudelarecherche = document.getElementById("contenudelarecherche")
     const sliderducontenu = document.getElementById("content_research")
-    const new_contenudelarecherche = Creation_Div(sliderducontenu, "contenudelarecherche")
+    const new_contenudelarecherche = creatediv(sliderducontenu, "contenudelarecherche")
 
     creerlayoutrecherche(new_contenudelarecherche)
     glissersurlagauche(sliderducontenu, contenudelarecherche, new_contenudelarecherche, "absolute")
@@ -912,7 +929,7 @@ function glissersurladroiterecherche(){
 
     const slider = document.getElementById("user_research")
     const titreactuel = document.getElementById("researchtitle")
-    const nouveautitre = Creation_Div(slider, "researchtitle")
+    const nouveautitre = creatediv(slider, "researchtitle")
     // const nouveautitre = document.createElement("div")
 
     // slider.appendChild(nouveautitre)
@@ -924,7 +941,7 @@ function glissersurladroiterecherche(){
 
     const contenudelarecherche = document.getElementById("contenudelarecherche")
     const sliderducontenu = document.getElementById("content_research")
-    const new_contenudelarecherche = Creation_Div(sliderducontenu, "contenudelarecherche")
+    const new_contenudelarecherche = creatediv(sliderducontenu, "contenudelarecherche")
     // const new_contenudelarecherche = document.createElement("div")
 
     // sliderducontenu.appendChild(new_contenudelarecherche)
@@ -947,17 +964,17 @@ function creerlayoutplanningsalle(parentelement){
     }
 
     //-----Création du nouveau layout avec toutes les informations-----
-    const container = Creation_Div(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
+    const container = creatediv(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
     const nom_salle = document.getElementsByClassName("inputnomdelasalle")[0].value //Récupération du nom de la salle avec le selecteur
     const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ") //Récupération de la date
     
-    const date = [parseInt(datedegueu[0]), Mois_Nom(datedegueu[1]), parseInt(datedegueu[2])]
+    const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
     console.log(date)
     
-    const paireimpaires = Parite_Semaine(date) //Récupérer la semaine en question (A ou B)
-    const jour = Jour_Semaine(date) //Récupérer le jour de la semaine
+    const paireimpaires = paireimpaire(date) //Récupérer la semaine en question (A ou B)
+    const jour = joursemaine(date) //Récupérer le jour de la semaine
 
-    const salle = Trouver_Salle(nom_salle) //Récupération de toutes les informations de la salle concerné
+    const salle = findsalle(nom_salle) //Récupération de toutes les informations de la salle concerné
     const arrayatrier = salle.planning[jour] //Récupération de toutes les informations du calendrier de la journée
 
     let newarray = []
@@ -983,20 +1000,20 @@ function creerlayoutplanningsalle(parentelement){
     //-----Ajout des éléments à la page-----
     for (let i = 0; i<newarray.length; i++){
         if (newarray[i] == 0){ //Si la salle est libre
-            const container_heure = Creation_Div(container, "container_planning")
-            const horaire = Creation_Div(container_heure, "horaire")
+            const container_heure = creatediv(container, "container_planning")
+            const horaire = creatediv(container_heure, "horaire")
             horaire.innerText = ListeHeures[i]
             horaire.style.fontSize = "25px"
-            const parent_text = Creation_Div(container_heure, "vert")
+            const parent_text = creatediv(container_heure, "vert")
             parent_text.style.width = "100%"
             parent_text.style.left = "20px"
             parent_text.style.position = "relative"
         } else if (newarray[i] == 1){ //Si la salle est prise
-            const container_heure = Creation_Div(container, "container_planning")
-            const horaire = Creation_Div(container_heure, "horaire")
+            const container_heure = creatediv(container, "container_planning")
+            const horaire = creatediv(container_heure, "horaire")
             horaire.innerText = ListeHeures[i]
             horaire.style.fontSize = "25px"
-            const parent_text = Creation_Div(container_heure, "rouge")
+            const parent_text = creatediv(container_heure, "rouge")
             parent_text.style.width = "100%"
             parent_text.style.left = "20px"
             parent_text.style.position = "relative"
@@ -1011,13 +1028,13 @@ function creerlayoutsallestempsprecis(parentelement){
     if (possiblecontainer.length >0){
         possiblecontainer[0].remove()
     }
-    const container = Creation_Div(parentelement, "container_salles_temps_precis")
-    const heuredecours = Heure_Cours_String(document.getElementsByClassName("inputheuredecours")[0].value)
+    const container = creatediv(parentelement, "container_salles_temps_precis")
+    const heuredecours = heuredecoursfonctionstring(document.getElementsByClassName("inputheuredecours")[0].value)
 
     const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ")
-    const date = [parseInt(datedegueu[0]), Mois_Nom(datedegueu[1]), parseInt(datedegueu[2])]
+    const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
 
-    const sallesdisponibles = Salles_Disponibles(date, heuredecours)
+    const sallesdisponibles = sallesdispo(date, heuredecours)
 
     for (let i = 0; i<sallesdisponibles.length; i++){
         creerlayoutsallemodel(sallesdisponibles[i], container)
@@ -1026,18 +1043,20 @@ function creerlayoutsallestempsprecis(parentelement){
 
 //-----Affichage de toutes les salles disponibles à une heure précise à un étage précis-----
 function creerlayoutsallesfonctionetage(parentelement){
-    const possiblecontainer = document.getElementsByClassName("container_salles_fonction_etage")
+    const possiblecontainer = document.getElementsByClassName("container_salles_fonction_etage") //Récupération des informations sur la div pour les étages
+    //-----Suppression de la div pour les salles par étages s'il y en avait déjà-----
     if (possiblecontainer.length >0){
         possiblecontainer[0].remove()
     }
-    const container = Creation_Div(parentelement, "container_salles_fonction_etage")
+
+    const container = creatediv(parentelement, "container_salles_fonction_etage") //Création de la div pour ajouter les informations
     
-    const heuredecours = Heure_Cours_String(document.getElementsByClassName("inputheuredecours")[0].value)
+    const heuredecours = heuredecoursfonctionstring(document.getElementsByClassName("inputheuredecours")[0].value) //Récupération de l'heure de cours
     const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ")
-    const date = [parseInt(datedegueu[0]), Mois_Nom(datedegueu[1]), parseInt(datedegueu[2])]
+    const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
     const etage = document.getElementsByClassName("input_etage")[0].value
 
-    const sallesdisponibles = Salles_Disponibles(date, heuredecours)
+    const sallesdisponibles = sallesdispo(date, heuredecours)
     let sallestriees = []
 
     for (let i = 0; i<sallesdisponibles.length; i++){ 
@@ -1075,11 +1094,19 @@ const ListeHeures = ["08h20", "09h15", "10h30", "11h25", "12h20", "13h15", "14h1
 
 creerlayoutrecherche(document.getElementById("contenudelarecherche"))
 
-const flechedroite = document.getElementById("fleche_droite")
-const flechegauche = document.getElementById("fleche_gauche")
+const flechedroite = document.getElementById("flechedroite")
+const flechegauche = document.getElementById("flechegauche")
 
 flechedroite.addEventListener('click', glissersurladroiterecherche, false);
 flechegauche.addEventListener('click', glissersurlagaucherecherche, false);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#close_information_compost').addEventListener('click', function() {
+        document.querySelector('#information_supplemantaire').style.display = "none";
+    });
+    document.querySelector('#information_supplemantaire').style.display = "none";
+});
 
 function More_Information_Salle(item) {
     document.querySelector('#information_supplemantaire').style.display = "block";
@@ -1095,7 +1122,7 @@ function More_Information_Salle(item) {
     let div_info_container = document.getElementById("information_salle_gauche")
     div_info_container.innerHTML = ""
     
-    let get_element_salle = Trouver_Salle(item)
+    let get_element_salle = findsalle(item)
     
     Information_Note(div_info_container, get_element_salle)
     //-----En travail-----
@@ -1116,7 +1143,10 @@ function More_Information_Salle(item) {
 
 //-----A factoriser pour plus de simplicité-----
 function Information_Note(div_info_container, _salle) {
-    fr_div = Creation_Div(div_info_container, "")
+    fr_div = creatediv(div_info_container, "")
+    let inter = document.createElement("h2")
+    fr_div.appendChild(inter) //Création de la div pour l'image
+    inter.innerHTML = _salle.name
     let element = document.createElement("h2") //Création de la div pour l'image
     fr_div.appendChild(element)
     element.innerHTML  = "Note" //Ajout d'une class à la div de l'image
@@ -1128,7 +1158,7 @@ function Information_Note(div_info_container, _salle) {
 }
 
 function Information_Disponibilite(div_info_container, _salle) {
-    fr_div = Creation_Div(div_info_container, "")
+    fr_div = creatediv(div_info_container, "")
     element = document.createElement("h2") //Création de la div pour l'image
     fr_div.appendChild(element)
     element.innerHTML  = "Disponibilité" //Ajout d'une class à la div de l'image
@@ -1145,7 +1175,7 @@ function Information_Disponibilite(div_info_container, _salle) {
 }
 
 function Information_Duree(div_info_container, _salle) {
-    fr_div = Creation_Div(div_info_container, "")
+    fr_div = creatediv(div_info_container, "")
     element = document.createElement("h2") //Création de la div pour l'image
     fr_div.appendChild(element)
     element.innerHTML  = "Durée restante" //Ajout d'une class à la div de l'image
@@ -1157,7 +1187,7 @@ function Information_Duree(div_info_container, _salle) {
 }
 
 function Description_Objective(div_info_container, _salle) {
-    fr_div = Creation_Div(div_info_container, "")
+    fr_div = creatediv(div_info_container, "")
     fr_div.classList.add("text1")
     element = document.createElement("h2") //Création de la div pour l'image
     fr_div.appendChild(element)
@@ -1170,7 +1200,7 @@ function Description_Objective(div_info_container, _salle) {
 }
 
 function Description_Subjective(div_info_container, _salle) {
-    fr_div = Creation_Div(div_info_container, "")
+    fr_div = creatediv(div_info_container, "")
     fr_div.classList.add("text2")
     element = document.createElement("h2") //Création de la div pour l'image
     fr_div.appendChild(element)
@@ -1185,13 +1215,13 @@ function Description_Subjective(div_info_container, _salle) {
 function Emploi_Du_Temps_More(parentelement, salle) {
 
     //-----Création du nouveau layout avec toutes les informations-----
-    const container = Creation_Div(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
+    const container = creatediv(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
     const datedegueu = new Date()
     const date = [parseInt(datedegueu.getDate()), parseInt(datedegueu.getMonth()), parseInt(datedegueu.getFullYear())]
     console.log(datedegueu.getMonth())
     
-    const paireimpaires = Parite_Semaine(date) //Récupérer la semaine en question (A ou B)
-    const jour = Jour_Semaine(date) //Récupérer le jour de la semaine
+    const paireimpaires = paireimpaire(date) //Récupérer la semaine en question (A ou B)
+    const jour = joursemaine(date) //Récupérer le jour de la semaine
 
     const arrayatrier = salle.planning[jour] //Récupération de toutes les informations du calendrier de la journée
     console.log(date, paireimpaires, jour, salle, arrayatrier)
@@ -1219,20 +1249,20 @@ function Emploi_Du_Temps_More(parentelement, salle) {
     //-----Ajout des éléments à la page-----
     for (let i = 0; i<newarray.length; i++){
         if (newarray[i] == 0){ //Si la salle est libre
-            const container_heure = Creation_Div(container, "container_planning")
-            const horaire = Creation_Div(container_heure, "horaire")
+            const container_heure = creatediv(container, "container_planning")
+            const horaire = creatediv(container_heure, "horaire")
             horaire.innerText = ListeHeures[i]
             horaire.style.fontSize = "25px"
-            const parent_text = Creation_Div(container_heure, "vert")
+            const parent_text = creatediv(container_heure, "vert")
             parent_text.style.width = "100%"
             parent_text.style.left = "20px"
             parent_text.style.position = "relative"
         } else if (newarray[i] == 1){ //Si la salle est prise
-            const container_heure = Creation_Div(container, "container_planning")
-            const horaire = Creation_Div(container_heure, "horaire")
+            const container_heure = creatediv(container, "container_planning")
+            const horaire = creatediv(container_heure, "horaire")
             horaire.innerText = ListeHeures[i]
             horaire.style.fontSize = "25px"
-            const parent_text = Creation_Div(container_heure, "rouge")
+            const parent_text = creatediv(container_heure, "rouge")
             parent_text.style.width = "100%"
             parent_text.style.left = "20px"
             parent_text.style.position = "relative"
@@ -1252,5 +1282,3 @@ function Calcul_Temps_Restant(_salle) {
 
 
 }
-
-//
