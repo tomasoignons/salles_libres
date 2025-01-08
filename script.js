@@ -1,10 +1,13 @@
 
 //-----CREATION DE LA MEGA LISTE DE SALLES-----
 
+//Les fonctions d'activations se trouvent aux lignes 650 et 1080
+
 class Sallemodel {
-    constructor (name, description, image, planning, temps, duree, disponibilite, note) {
+    constructor (name, description, easter_egg, image, planning, temps, duree, disponibilite, note) {
         this.name = name, //Nom de la salle
         this.description = description, //Description de la salle
+        this.easter_egg = this.easter_egg
         this.image = image, //Image de référence pour décorer le fond en fonction de salle
         this.planning = planning, //Le planning des horaires de la salle
         this.temps = temps, //A développer
@@ -16,11 +19,12 @@ class Sallemodel {
 
 let SalleList = []
 
-function resetSalleList (){
+function Reset_Salle_Libre(){
     SalleList.push(
         new Sallemodel(
             "GF11",
-            "une salle bien sympathique, où a étudié le créateur de cette application",
+            "Une salle spatieuse, sympa, où il y fait bon de passer du temps, mais toujours remplie de premières, terminale passe ton chemin.",
+            "Une salle pour les Goat où ont étudié le fondateur et le co-fondateur.",
             "GF11",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      1,      1,      1,      1,      0,      0], //Lundi
@@ -40,6 +44,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF15",
+            "Une salle spatieuse, sympa. Des personnes y travaillent souvent sur le tableau. Toujours remplie de terminales, première passe ton chemin.",
             "La meilleure salle de mathématique, la ZGAM perdurera toujours !",
             "GF15",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
@@ -61,6 +66,7 @@ function resetSalleList (){
         new Sallemodel(
             "GF23",
             "souvent dispo, souvent pleine de monde. Beaucoup trop bruyante, je déconseille fortement",
+            "à faire",
             "GF23",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      0,      1,      1,      4,      0,      0], //Lundi
@@ -80,7 +86,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF24",
-            "sûrement la meilleure salle de tout le lycée, discrète, souvent libre, pas trop de monde",
+            "Petite salle, souvent remplie de monde. Les gens sont sympas, donc vient manger avec eux.",
+            "J'ai pas de commentaire, si ce n'est que le co-créateur a beaucoup de cours ici. Si tu le cherche, c'est l'endroit parfait.",
             "GF24",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      4,      1,      1,      1,      1,      1,      1,      0,      0], //Lundi
@@ -100,7 +107,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF25",
-            "inconnue au bataillon, à côté de la GF23, il y a souvent du monde puisque les personnes fuient la GF23 ici",
+            "Inconnue au bataillon, à côté de la GF23, petite. Il y a souvent du monde puisque les gens fuient la GF23.",
+            "Tu veux que je raconte quoi si ce n'est qu'il y a du monde ???",
             "GF25",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      4,      1,      1,      1,      1,      1,      0], //Lundi
@@ -120,7 +128,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF30",
-            "assez discète, il faut savoir où la trouver, et en plus, elle est toujours prise",
+            "Identique à la GF40, sauf qu'il y a moins de personnes et qu'il manque un tableau au fond de la classe.",
+            "Pourquoi il y a une table random en plein milieu de la salle ? Le zero est justifé par du plagiat.",
             "GF30",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      1,      1,      1,      1,      6,      1,      0], //Lundi
@@ -140,7 +149,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF32",
-            "les gens viennent souvent dormir, donc viens pas manger ici",
+            "Salle avec une mauvaise accoustique. Ne pas oublier le doliprane.",
+            "Pendant l'année 2023/2024, c'était là où c'est déroulé le cours le plus goatesque de tous les temps avec M.Masselin, M.Lacroix et la théorie du tout.",
             "GF32",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      0,      0,      1,      0,      1,      0], //Lundi
@@ -160,7 +170,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF34",
-            "Pour des raisons que j'ignone, cette salle est souvent pleine",
+            "Salle, avec peu de monde. Toujours remplie le mercredi midi.",
+            "La salle par excellence pour résoudre des équations différentielles d'ordre 4 avec le Goat M.Masselin.",
             "GF34",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      4,      1,      1,      1,      1,      0,      0], //Lundi
@@ -180,7 +191,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF40",
-            "inconnue au bataillon, à droite du bureau de Mme Reiss",
+            "Souvent occupée le jeudi par des terminales. Il y fait bon de passer du temps. Calme sauf le jeudi, attention aux oreilles. A côté du bureau de Monsieur Depondt.",
+            "Nouvelle Update, la ZLAN s'installe, Minecraft, Fortnite, Subway Surfer, Geometry Dash se sont invités sur le tableau.",
             "GF40",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      6,      0,      1,      1,      1,      1,      0], //Lundi
@@ -200,7 +212,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF41",
-            "Salle calme, sauf quand des terminales viennent faire des tierlists et hurlent",
+            "Salle calme, spatieuse, sauf quand des terminales se mettent à crier. Souvent réquisitionnée par des commissions.",
+            "Salle préférée de M.Diao. On sait pas pourquoi, mais il aime passer de la GF40 à la GF41. Attention aux téléphones qui volent.",
             "GF41",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      0,      1,      1,      1,      1,      0], //Lundi
@@ -220,7 +233,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF42",
-            "salle exentrée, plutôt pas mal",
+            "Salle très calme, où il peut faire froid. Ne pas oublier son pull. Idéal pour faire la sieste.",
+            "Qu'est ce que tu veux raconter sur cette salle où personne ne va. 42 c'est la réponse à tout, donc 20/20.",
             "GF42",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      4,      0,      4,      1,      1,      4,      0], //Lundi
@@ -241,6 +255,7 @@ function resetSalleList (){
         new Sallemodel(
             "GF43",
             "salle centrale, domaine des terminales, 1eres passez votre chemin",
+            "à faire",
             "GF43",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      0,      0,      6,      1,      1,      1,      0], //Lundi
@@ -260,7 +275,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF44",
-            "super discrète, souvent remplie de littéraires... A voir...",
+            "Super discrète, souvent vide ou avec quelques littéraires... A voir...",
+            "Je n'ai rien à dire mais quand je suis venu il y avait marqué : 'Die Wohngemeinschaft'. Vous avez 4 heures.",
             "GF44",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      0,      1,      1,      0,      0,      1,      0], //Lundi
@@ -281,6 +297,7 @@ function resetSalleList (){
         new Sallemodel(
             "GF45",
             "les gens y font la sieste, donc viens te joindre à eux !",
+            "à faire",
             "GF45",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      0,      1,      4,      0,      1,      1,      0,      0,      0], //Lundi
@@ -300,7 +317,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF50",
-            "mec t'es vraiment sûr de vouloir aller au 5e ?",
+            "Que dire, personne n'y va. Elle est toujours vide, sauf pour les cours.",
+            "Il existe un Goat des maths appartenant aux terminales, qui travaille ici.",
             "GF50",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      0,      1,      1,      1,      1,      1,      0], //Lundi
@@ -320,7 +338,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF51",
-            "et oui, on tient la salle la plus excentrée, au moins si t'y vas t'es sûr qu'elle soit libre",
+            "Salle la plus excentrée de tout le lycée. Toujours dispo, sauf si une personne a eu la même idée que toi.",
+            "Que dire, des fantômes y reignent. PAS DE SORTIE AVANT 11H20.",
             "GF51",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      6,      1,      0,      0,      1,      1,      1,      1,      0,      0], //Lundi
@@ -340,7 +359,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF52",
-            "détruis ton cardio si tu veux, ce n'est pas mon problème",
+            "Salle spatieuse, mais un peu vide d'esprit. Toujours prise d'assaut par un groupe d'ami de terminale.",
+            "Détruis ton cardio si tu veux, ce n'est pas mon problème, il y a toujours beaucoup d'agitation.",
             "GF52",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      0,      0,      4,      1,      1,      1,      1,      6,      0], //Lundi
@@ -360,7 +380,8 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF53",
-            "salle d'examen, interdit de manger",
+            "Salle d'examen, la plus grande de toutes les salles, interdit de manger.",
+            "T'as vraiement envie de revivre le traumatisme de tes examens. La philo pendant 2 heures, ça peut te tuer.",
             "GF53",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [0,      0,      0,      1,      0,      0,      0,      1,      1,      0,      0], //Lundi
@@ -393,25 +414,24 @@ function Heure(){
 };
 
 //-----Récupérer la date d'aujourd'hui sous la forme d'une liste-----
-function FonctionDate(){
+function Date_Today(){
     const dateactuelle = new Date();
     date = [dateactuelle.getDate(), dateactuelle.getMonth(), dateactuelle.getFullYear()]
     return(date)
 }
 
 //-----Obtenir le numero de la semaine-----
-function numerosemaine(date){
-    const dateactuelle = new Date(date[2], date[1]-1, date[0]); //Récupération de la date actuelle
+function Numero_Semaine(date){
+    const dateactuelle = new Date(date[2], date[1], date[0]); //Récupération de la date actuelle
     const oneJan = new Date(dateactuelle.getFullYear(),0,1); //Récupération de la date du 1 janvier
     let numberOfDays = Math.floor((dateactuelle - oneJan) / (24 * 60 * 60 * 1000));
     let numerosemaine = Math.ceil(( dateactuelle.getDay() + 1 + numberOfDays) / 7);
     return(numerosemaine)
 }
 
-//savoir si une date est dans une semaine paire ou impaire
-//probaabilité importante qu'il y ait un truc qui merde ici lol
-function paireimpaire(date){
-    let paireimpaire = numerosemaine(date)%2
+//-----Obtenir la parité d'une semaine (A ou B)-----
+function Parite_Semaine(date){
+    let paireimpaire = Numero_Semaine(date)%2
     if (paireimpaire == 0){
         return ("A")
     } else if (paireimpaire == 1){
@@ -419,8 +439,8 @@ function paireimpaire(date){
     }
 }
 
-//savoir à quelle heure on est (entre 0 et 10)
-function numeroheuredecours(heuredonnee){
+//-----Connaitre l'heure (entre 0 = 8h20 et 10 = 18h05)-----
+function Heure_Cours(heuredonnee){
 
     let heure = heuredonnee[0]
     let minute = heuredonnee[1]
@@ -490,10 +510,8 @@ function numeroheuredecours(heuredonnee){
 
 
 //-----Connaitre un jour de la semaine pour une date donnée | Les jours de la semaines sont : Dimanche = 0; Lundi = 1; Mardi = 2; Mercredi = 3; Jeudi = 4; Vendredi = 5; Samedi = 6-----
-function joursemaine(date){
-    
-    let date_find = new Date(date[2],date[1]-1,date[0]) //Initialisation de la date à la date choisi par l'utilisateur
-    
+function Jour_Semaine(date){
+    let date_find = new Date(date[2],date[1],date[0]) //Initialisation de la date à la date choisi par l'utilisateur
     let joursemaine = date_find.getDay() - 1
     
     if (joursemaine < 0){
@@ -504,69 +522,41 @@ function joursemaine(date){
 }
 
 //-----Obtenir la prochaine heure de début de cours-----
-function heureapres(heure){
+function Heure_Suivante(heure){
     let temps = heure[0]*60 + heure[1] + 55; //Convertion du temps en minute en rajoutant 55 minutes
     let minutes = temps%60 //Récupération des heures pour la prochaine heure
     let Heureapres = (temps-minutes)/60 //Récupération des minutes pour la prochaine heure
     return([Heureapres, minutes])
 }
 
-function moisenfonctionnom(mois){
-    if (mois == "January"){
-        return (1)
-    } else if (mois == "February"){
-        return (2)
-    } else if (mois == "March"){
-        return (3)
-    } else if (mois == "April"){
-        return (4)
-    } else if (mois == "May"){
-        return (5)
-    } else if (mois == "June"){
-        return (6)
-    } else if (mois == "July"){
-        return (7)
-    } else if (mois == "August"){
-        return (8)
-    } else if (mois == "September"){
-        return (9)
-    } else if (mois == "October"){
-        return (10)
-    } else if (mois == "November"){
-        return (11)
-    } else if (mois == "December"){
-        return (12)
-    }
+function Mois_Nom(mois){
+    let _mois = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    return _mois.indexOf(mois)
 }
 
-function heuredecoursfonctionstring (heuredecours){
+function Heure_Cours_String(heuredecours){
     return ListeHeures.indexOf(heuredecours.split(" ")[1])
 }
 //-----------------------------------------------GERER LES DIFFERENTES SALLES DISPONIBLES---------------------------------------------------
 
 
-function sallesdispo(date, heure){
-    jour = joursemaine(date)
-    paire = paireimpaire(date)
+function Salles_Disponibles(date, heure){
+    jour = Jour_Semaine(date)
+    paire = Parite_Semaine(date)
     if (heure == undefined){
         heure = 0
     }
     if (heure[1] !== undefined){
-        heure = numeroheuredecours(heure)
+        heure = Heure_Cours(heure)
     }
-    console.log("heure : ", heure)
     let sallesdisponibles = []
     if (heure == 30){
         return(sallesdisponibles)
     }
-    console.log("paire : ", paire)
     if (paire == "A"){
-        console.log("ok")
         for (let i = 0; i < SalleList.length; i++) {
-            console.log(SalleList[i].planning, jour, heure);
 
             if (SalleList[i].planning[jour][heure] == 0 || SalleList[i].planning[jour][heure] == 6){
-                console.log("lol");
                 sallesdisponibles.push(SalleList[i]);
             }
         }
@@ -583,7 +573,7 @@ function sallesdispo(date, heure){
 
 //-----------------trouver une salle et en renvoyer le sallemodel-------------------
 
-function findsalle(sallename){
+function Trouver_Salle(sallename){
     for (let i = 0; i<SalleList.length; i++){
         if (SalleList[i].name == sallename){
             return(SalleList[i])
@@ -595,7 +585,7 @@ function findsalle(sallename){
 //-------------------------------------FONCTIONS DE CREATION D'ELEMENTS AVEC LES SALLES MODELS------------------------
 
 //mega fonction pour juste créer une div avec un élément parent précis, et une classname logique
-function creatediv(elementparent, classname){
+function Creation_Div(elementparent, classname){
     const div = document.createElement("div") //Création d'un élément | type -> div
     elementparent.appendChild(div) //Attaché l'élement crée div à un parent qui est argument
     if (classname != "") {
@@ -609,74 +599,71 @@ function creatediv(elementparent, classname){
 function creerlayoutsallemodel(salle, parentelement){
 
     //création de la div contenu, et de l'imagecontainer
-    let divcontenu = creatediv(parentelement, "SalleModel")
-
+    let divcontenu = Creation_Div(parentelement, "Salle-Model")
 
     //création de l'image container, pour pouvoir le modifier plus facilement
-    let divimagecontainer = creatediv(divcontenu, "SalleModel_image_container")
+    let divimagecontainer = Creation_Div(divcontenu, "Salle-Model-image-container")
     divimagecontainer.style.height = `${divcontenu.offsetHeight-20}px`
     divimagecontainer.style.left  = divcontenu.style.paddingLeft
     divimagecontainer.style.top = divcontenu.style.paddingTop
     divimagecontainer.style.width = divimagecontainer.style.height
 
     //insertion du titre
-    let divtitre = creatediv(divcontenu, "SalleModel_titre")
+    let divtitre = Creation_Div(divcontenu, "Salle-Model-titre")
     divtitre.innerText = salle.name
     divtitre.style.top = divcontenu.style.paddingTop;
     divtitre.style.left = `${divimagecontainer.offsetWidth+20}px`
 
-    //insertion de l'image
-    let divimage = document.createElement("img")
-    divimagecontainer.appendChild(divimage)
-    divimage.classList.add("SalleModel_image")
-    divimage.src = `images/${salle.image}.jpg`
-    console.log(parseInt(divimagecontainer.style.height) + 10)
-    //insertion de la description
-    let divdescription = creatediv(divcontenu, "SalleModel_description")
-    divdescription.style.height = `${parseInt(divimagecontainer.style.height) - 20}px`
-    divdescription.style.overflow = "scroll"
-    divdescription.style.backgroundColor = "rgba(199, 199, 199, 0.3)"
-    divdescription.style.borderWidth = 'thick'
-    divdescription.innerHTML = salle.description
-    divdescription.style.left = divtitre.style.left
-    divdescription.style.top = `${divtitre.offsetHeight +10}px`
-    divdescription.style.width = `${divcontenu.offsetWidth - divimagecontainer.offsetWidth -30}px`
+    //-----Insertion de l'image-----
+    let divimage = document.createElement("img") //Création de la div pour l'image
+    let get_more_information_image = document.createElement("button") //Création d'un lien qui est clickable dans l'image
+    //-----Apparance du button pour l'image-----
+    get_more_information_image.style.appearance = "none";
+    get_more_information_image.style.border = "none";
+    get_more_information_image.style.cursor = "pointer";
+    get_more_information_image.style.BackgroundColor = "inherit"
+    get_more_information_image.setAttribute("class", salle.name);
+    get_more_information_image.onclick = function(){More_Information_Salle(get_more_information_image.classList)}
+
+    divimagecontainer.appendChild(get_more_information_image)
+    get_more_information_image.appendChild(divimage) //Mettre l'image en enfant du conteneur de l'image
+    divimage.classList.add("Salle-Model-image") //Ajout d'une class à la div de l'image
+    divimage.src = `images/${salle.image}.jpg` //Récupération de l'image du côté serveur
+
+    //-----Insertion de la description-----
+    let divdescription = Creation_Div(divcontenu, "Salle-Model-description") //Création de la div pour la description de la salle
+    divdescription.style.height = `${parseInt(divimagecontainer.style.height) - 20}px` //Initialisation de la hauteur de la description
+    divdescription.style.overflowY = "scroll" //Ajout d'une barre de défilement pour l'overflox sur la hauteur
+    divdescription.style.backgroundColor = "rgba(199, 199, 199, 0.3)" //Changement de la texture d'arrière plan pour la description
+    divdescription.innerHTML = salle.description //Initialisation de la description de salle
+    divdescription.style.left = divtitre.style.left //Décaler l'image de quelque pixel vers la droite par rapport à la gauche de l'image
+    divdescription.style.top = `${divtitre.offsetHeight +10}px` //Décaler le titre de quelque pixel vers le bas par rapport au haut de la div
+    divdescription.style.width = `${divcontenu.offsetWidth - divimagecontainer.offsetWidth -30}px` //Initialisation de la largeur de la description
     
 }
 
 //----------------------------------------------CODE DE LA PAGE ET DES LAYOUT-----------------------------------------------
-resetSalleList()
-
-
+Reset_Salle_Libre()
 
 const carousselmaintenant = document.getElementById("contenu_maintenant")
-const carousselheureapres = document.getElementById("contenu_prochaineheure")
+const carousselheureapres = document.getElementById("contenu_prochaine_heure")
 
 //-----Remplir le caroussel des horraires des salles disponibles maintenant-----
-const dateajd = FonctionDate()
+const dateajd = Date_Today()
 const heureactuelle = Heure()
-const sallesdisponibles = sallesdispo(dateajd, heureactuelle)
-console.log(sallesdisponibles)
+const sallesdisponibles = Salles_Disponibles(dateajd, heureactuelle)
 
 for (let i = 0; i<sallesdisponibles.length; i++){
     creerlayoutsallemodel(sallesdisponibles[i], carousselmaintenant)
 }
 //remplir le caroussel heuresuivante
-const Heureapres = heureapres(heureactuelle)
-const sallesdispoheureapres = sallesdispo(dateajd, Heureapres)
+const Heureapres = Heure_Suivante(heureactuelle)
+const sallesdispoheureapres = Salles_Disponibles(dateajd, Heureapres)
 
 for (let i = 0; i<sallesdispoheureapres.length; i++){
     creerlayoutsallemodel(sallesdispoheureapres[i], carousselheureapres)
 }
 //------------------------------------------CODE DU LAYOUT DE RECHERCHE---------------------------------------------------------
-
-
-//fonction pour créer une div sur la page, l'assigner à un élément parent, et lui mettre une classname
-
-
-
-
-
 
 //initialisation du titre fait de manière propre et clean pour laisser des possibilités de modification dans le futur
 const listtitrespossibles = ["Planning d'une salle", "Salle à un temps précis", "Salles par étages"]
@@ -698,8 +685,8 @@ function createoption(parentelement, nomoption){
 
 function createnomdelasalle(parentelement){
 
-    const container = creatediv(parentelement, "container_nom_salle")
-    const titre = creatediv(container, "titre_nom_de_la_salle")
+    const container = Creation_Div(parentelement, "container_nom_salle")
+    const titre = Creation_Div(container, "titre_nom_de_la_salle")
     titre.innerText = "Nom de la salle"
 
     const selecteurnomdelasalle = document.createElement("select")
@@ -716,8 +703,8 @@ function createnomdelasalle(parentelement){
 
 function createdateinput(parentelement){
 
-    const container = creatediv(parentelement, "container_date_salle")
-    const titre = creatediv(container, "titre_date_recherche")
+    const container = Creation_Div(parentelement, "container_date_salle")
+    const titre = Creation_Div(container, "titre_date_recherche")
     titre.innerText = "Choisir la date"
 
     const inputdate = document.createElement("input")
@@ -744,7 +731,7 @@ function createdateinput(parentelement){
 
 //-----Fonction essentiel car elle gère la création du bouton sur la page et lui permet de fonctionner-----
 function createrecherchebutton(parentelement){
-    const container = creatediv(parentelement, "container_button")
+    const container = Creation_Div(parentelement, "container_button")
     const button = document.createElement("button") //Création d'un élément | type --> button
     container.appendChild(button) //Attaché l'élement crée button à un parent qui est le container crée juste au-dessus
     button.classList.add("button_research") //Ajouter une class à l'élément div crée
@@ -757,9 +744,9 @@ function createrecherchebutton(parentelement){
 }
 
 function create_input_heure_de_cours(parentelement){
-    const container = creatediv(parentelement, "container_input_heure") //Création du conteneur pour les heures
+    const container = Creation_Div(parentelement, "container_input_heure") //Création du conteneur pour les heures
     //-----Création de la div pour le titre de la partie-----
-    const titre = creatediv(container, "titre_heure_de_cours")
+    const titre = Creation_Div(container, "titre_heure_de_cours")
     titre.innerText = "Heure de cours"
 
     const selecteurheuredecours = document.createElement("select") //Création du menu déroulant pour le choix des heures de cours
@@ -775,9 +762,9 @@ function create_input_heure_de_cours(parentelement){
 }
 
 function create_etage_input(parentelement){
-    const container = creatediv(parentelement, "container_etage_salle_input") //Création du conteneur pour les étages
+    const container = Creation_Div(parentelement, "container_etage_salle_input") //Création du conteneur pour les étages
     //-----Création de la div pour le titre de la partie-----
-    const titre = creatediv(container, "etages_titre")
+    const titre = Creation_Div(container, "etages_titre")
     titre.innerText = "Etage"
 
     const selecteur_etage_cours = document.createElement("select") //Création du menu déroulant pour le choix des étages de cours
@@ -898,7 +885,7 @@ function glissersurlagaucherecherche(){
     //content de tout ce qui sert
     const slider = document.getElementById("user_research")
     const titreactuel = document.getElementById("researchtitle")
-    const nouveautitre = creatediv(slider, "researchtitle")
+    const nouveautitre = Creation_Div(slider, "researchtitle")
 
     nouveautitre.innerText = nouveautitretexte("gauche")
     glissersurlagauche(slider, titreactuel, nouveautitre, "relative")
@@ -907,7 +894,7 @@ function glissersurlagaucherecherche(){
     //layout du contenu de la recherche
     const contenudelarecherche = document.getElementById("contenudelarecherche")
     const sliderducontenu = document.getElementById("content_research")
-    const new_contenudelarecherche = creatediv(sliderducontenu, "contenudelarecherche")
+    const new_contenudelarecherche = Creation_Div(sliderducontenu, "contenudelarecherche")
 
     creerlayoutrecherche(new_contenudelarecherche)
     glissersurlagauche(sliderducontenu, contenudelarecherche, new_contenudelarecherche, "absolute")
@@ -925,7 +912,7 @@ function glissersurladroiterecherche(){
 
     const slider = document.getElementById("user_research")
     const titreactuel = document.getElementById("researchtitle")
-    const nouveautitre = creatediv(slider, "researchtitle")
+    const nouveautitre = Creation_Div(slider, "researchtitle")
     // const nouveautitre = document.createElement("div")
 
     // slider.appendChild(nouveautitre)
@@ -937,7 +924,7 @@ function glissersurladroiterecherche(){
 
     const contenudelarecherche = document.getElementById("contenudelarecherche")
     const sliderducontenu = document.getElementById("content_research")
-    const new_contenudelarecherche = creatediv(sliderducontenu, "contenudelarecherche")
+    const new_contenudelarecherche = Creation_Div(sliderducontenu, "contenudelarecherche")
     // const new_contenudelarecherche = document.createElement("div")
 
     // sliderducontenu.appendChild(new_contenudelarecherche)
@@ -960,17 +947,17 @@ function creerlayoutplanningsalle(parentelement){
     }
 
     //-----Création du nouveau layout avec toutes les informations-----
-    const container = creatediv(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
+    const container = Creation_Div(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
     const nom_salle = document.getElementsByClassName("inputnomdelasalle")[0].value //Récupération du nom de la salle avec le selecteur
     const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ") //Récupération de la date
     
-    const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
+    const date = [parseInt(datedegueu[0]), Mois_Nom(datedegueu[1]), parseInt(datedegueu[2])]
     console.log(date)
     
-    const paireimpaires = paireimpaire(date) //Récupérer la semaine en question (A ou B)
-    const jour = joursemaine(date) //Récupérer le jour de la semaine
+    const paireimpaires = Parite_Semaine(date) //Récupérer la semaine en question (A ou B)
+    const jour = Jour_Semaine(date) //Récupérer le jour de la semaine
 
-    const salle = findsalle(nom_salle) //Récupération de toutes les informations de la salle concerné
+    const salle = Trouver_Salle(nom_salle) //Récupération de toutes les informations de la salle concerné
     const arrayatrier = salle.planning[jour] //Récupération de toutes les informations du calendrier de la journée
 
     let newarray = []
@@ -996,20 +983,20 @@ function creerlayoutplanningsalle(parentelement){
     //-----Ajout des éléments à la page-----
     for (let i = 0; i<newarray.length; i++){
         if (newarray[i] == 0){ //Si la salle est libre
-            const container_heure = creatediv(container, "container_planning")
-            const horaire = creatediv(container_heure, "horaire")
+            const container_heure = Creation_Div(container, "container_planning")
+            const horaire = Creation_Div(container_heure, "horaire")
             horaire.innerText = ListeHeures[i]
             horaire.style.fontSize = "25px"
-            const parent_text = creatediv(container_heure, "vert")
+            const parent_text = Creation_Div(container_heure, "vert")
             parent_text.style.width = "100%"
             parent_text.style.left = "20px"
             parent_text.style.position = "relative"
         } else if (newarray[i] == 1){ //Si la salle est prise
-            const container_heure = creatediv(container, "container_planning")
-            const horaire = creatediv(container_heure, "horaire")
+            const container_heure = Creation_Div(container, "container_planning")
+            const horaire = Creation_Div(container_heure, "horaire")
             horaire.innerText = ListeHeures[i]
             horaire.style.fontSize = "25px"
-            const parent_text = creatediv(container_heure, "rouge")
+            const parent_text = Creation_Div(container_heure, "rouge")
             parent_text.style.width = "100%"
             parent_text.style.left = "20px"
             parent_text.style.position = "relative"
@@ -1024,13 +1011,13 @@ function creerlayoutsallestempsprecis(parentelement){
     if (possiblecontainer.length >0){
         possiblecontainer[0].remove()
     }
-    const container = creatediv(parentelement, "container_salles_temps_precis")
-    const heuredecours = heuredecoursfonctionstring(document.getElementsByClassName("inputheuredecours")[0].value)
+    const container = Creation_Div(parentelement, "container_salles_temps_precis")
+    const heuredecours = Heure_Cours_String(document.getElementsByClassName("inputheuredecours")[0].value)
 
     const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ")
-    const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
+    const date = [parseInt(datedegueu[0]), Mois_Nom(datedegueu[1]), parseInt(datedegueu[2])]
 
-    const sallesdisponibles = sallesdispo(date, heuredecours)
+    const sallesdisponibles = Salles_Disponibles(date, heuredecours)
 
     for (let i = 0; i<sallesdisponibles.length; i++){
         creerlayoutsallemodel(sallesdisponibles[i], container)
@@ -1043,14 +1030,14 @@ function creerlayoutsallesfonctionetage(parentelement){
     if (possiblecontainer.length >0){
         possiblecontainer[0].remove()
     }
-    const container = creatediv(parentelement, "container_salles_fonction_etage")
+    const container = Creation_Div(parentelement, "container_salles_fonction_etage")
     
-    const heuredecours = heuredecoursfonctionstring(document.getElementsByClassName("inputheuredecours")[0].value)
+    const heuredecours = Heure_Cours_String(document.getElementsByClassName("inputheuredecours")[0].value)
     const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ")
-    const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
+    const date = [parseInt(datedegueu[0]), Mois_Nom(datedegueu[1]), parseInt(datedegueu[2])]
     const etage = document.getElementsByClassName("input_etage")[0].value
 
-    const sallesdisponibles = sallesdispo(date, heuredecours)
+    const sallesdisponibles = Salles_Disponibles(date, heuredecours)
     let sallestriees = []
 
     for (let i = 0; i<sallesdisponibles.length; i++){ 
@@ -1088,19 +1075,11 @@ const ListeHeures = ["08h20", "09h15", "10h30", "11h25", "12h20", "13h15", "14h1
 
 creerlayoutrecherche(document.getElementById("contenudelarecherche"))
 
-const flechedroite = document.getElementById("flechedroite")
-const flechegauche = document.getElementById("flechegauche")
+const flechedroite = document.getElementById("fleche_droite")
+const flechegauche = document.getElementById("fleche_gauche")
 
 flechedroite.addEventListener('click', glissersurladroiterecherche, false);
 flechegauche.addEventListener('click', glissersurlagaucherecherche, false);
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('#close_information_compost').addEventListener('click', function() {
-        document.querySelector('#information_supplemantaire').style.display = "none";
-    });
-    document.querySelector('#information_supplemantaire').style.display = "none";
-});
 
 function More_Information_Salle(item) {
     document.querySelector('#information_supplemantaire').style.display = "block";
@@ -1116,7 +1095,7 @@ function More_Information_Salle(item) {
     let div_info_container = document.getElementById("information_salle_gauche")
     div_info_container.innerHTML = ""
     
-    let get_element_salle = findsalle(item)
+    let get_element_salle = Trouver_Salle(item)
     
     Information_Note(div_info_container, get_element_salle)
     //-----En travail-----
@@ -1137,7 +1116,7 @@ function More_Information_Salle(item) {
 
 //-----A factoriser pour plus de simplicité-----
 function Information_Note(div_info_container, _salle) {
-    fr_div = creatediv(div_info_container, "")
+    fr_div = Creation_Div(div_info_container, "")
     let element = document.createElement("h2") //Création de la div pour l'image
     fr_div.appendChild(element)
     element.innerHTML  = "Note" //Ajout d'une class à la div de l'image
@@ -1149,7 +1128,7 @@ function Information_Note(div_info_container, _salle) {
 }
 
 function Information_Disponibilite(div_info_container, _salle) {
-    fr_div = creatediv(div_info_container, "")
+    fr_div = Creation_Div(div_info_container, "")
     element = document.createElement("h2") //Création de la div pour l'image
     fr_div.appendChild(element)
     element.innerHTML  = "Disponibilité" //Ajout d'une class à la div de l'image
@@ -1166,7 +1145,7 @@ function Information_Disponibilite(div_info_container, _salle) {
 }
 
 function Information_Duree(div_info_container, _salle) {
-    fr_div = creatediv(div_info_container, "")
+    fr_div = Creation_Div(div_info_container, "")
     element = document.createElement("h2") //Création de la div pour l'image
     fr_div.appendChild(element)
     element.innerHTML  = "Durée restante" //Ajout d'une class à la div de l'image
@@ -1178,7 +1157,7 @@ function Information_Duree(div_info_container, _salle) {
 }
 
 function Description_Objective(div_info_container, _salle) {
-    fr_div = creatediv(div_info_container, "")
+    fr_div = Creation_Div(div_info_container, "")
     fr_div.classList.add("text1")
     element = document.createElement("h2") //Création de la div pour l'image
     fr_div.appendChild(element)
@@ -1191,7 +1170,7 @@ function Description_Objective(div_info_container, _salle) {
 }
 
 function Description_Subjective(div_info_container, _salle) {
-    fr_div = creatediv(div_info_container, "")
+    fr_div = Creation_Div(div_info_container, "")
     fr_div.classList.add("text2")
     element = document.createElement("h2") //Création de la div pour l'image
     fr_div.appendChild(element)
@@ -1206,13 +1185,13 @@ function Description_Subjective(div_info_container, _salle) {
 function Emploi_Du_Temps_More(parentelement, salle) {
 
     //-----Création du nouveau layout avec toutes les informations-----
-    const container = creatediv(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
+    const container = Creation_Div(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
     const datedegueu = new Date()
     const date = [parseInt(datedegueu.getDate()), parseInt(datedegueu.getMonth()), parseInt(datedegueu.getFullYear())]
     console.log(datedegueu.getMonth())
     
-    const paireimpaires = paireimpaire(date) //Récupérer la semaine en question (A ou B)
-    const jour = joursemaine(date) //Récupérer le jour de la semaine
+    const paireimpaires = Parite_Semaine(date) //Récupérer la semaine en question (A ou B)
+    const jour = Jour_Semaine(date) //Récupérer le jour de la semaine
 
     const arrayatrier = salle.planning[jour] //Récupération de toutes les informations du calendrier de la journée
     console.log(date, paireimpaires, jour, salle, arrayatrier)
@@ -1240,20 +1219,20 @@ function Emploi_Du_Temps_More(parentelement, salle) {
     //-----Ajout des éléments à la page-----
     for (let i = 0; i<newarray.length; i++){
         if (newarray[i] == 0){ //Si la salle est libre
-            const container_heure = creatediv(container, "container_planning")
-            const horaire = creatediv(container_heure, "horaire")
+            const container_heure = Creation_Div(container, "container_planning")
+            const horaire = Creation_Div(container_heure, "horaire")
             horaire.innerText = ListeHeures[i]
             horaire.style.fontSize = "25px"
-            const parent_text = creatediv(container_heure, "vert")
+            const parent_text = Creation_Div(container_heure, "vert")
             parent_text.style.width = "100%"
             parent_text.style.left = "20px"
             parent_text.style.position = "relative"
         } else if (newarray[i] == 1){ //Si la salle est prise
-            const container_heure = creatediv(container, "container_planning")
-            const horaire = creatediv(container_heure, "horaire")
+            const container_heure = Creation_Div(container, "container_planning")
+            const horaire = Creation_Div(container_heure, "horaire")
             horaire.innerText = ListeHeures[i]
             horaire.style.fontSize = "25px"
-            const parent_text = creatediv(container_heure, "rouge")
+            const parent_text = Creation_Div(container_heure, "rouge")
             parent_text.style.width = "100%"
             parent_text.style.left = "20px"
             parent_text.style.position = "relative"
