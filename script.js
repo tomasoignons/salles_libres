@@ -414,7 +414,7 @@ function Heure(){
 //-----Récupérer la date d'aujourd'hui sous la forme d'une liste-----
 function FonctionDate(){
     const dateactuelle = new Date();
-    date = [dateactuelle.getDate(), dateactuelle.getMonth()+1, dateactuelle.getFullYear()]
+    date = [dateactuelle.getDate(), dateactuelle.getMonth(), dateactuelle.getFullYear()]
     return(date)
 }
 
@@ -550,16 +550,20 @@ function sallesdispo(date, heure){
     if (heure[1] !== undefined){
         heure = numeroheuredecours(heure)
     }
-
+    console.log("heure : ", heure)
     let sallesdisponibles = []
     if (heure == 30){
         return(sallesdisponibles)
     }
-
+    console.log("paire : ", paire)
     if (paire == "A"){
+        console.log("ok")
         for (let i = 0; i < SalleList.length; i++) {
+            console.log(SalleList[i].planning, jour, heure);
+
             if (SalleList[i].planning[jour][heure] == 0 || SalleList[i].planning[jour][heure] == 6){
-                sallesdisponibles.push(SalleList[i])
+                console.log("lol");
+                sallesdisponibles.push(SalleList[i]);
             }
         }
     } else if (paire == "B"){
@@ -656,6 +660,7 @@ const carousselheureapres = document.getElementById("contenu_prochaineheure")
 const dateajd = FonctionDate()
 const heureactuelle = Heure()
 const sallesdisponibles = sallesdispo(dateajd, heureactuelle)
+console.log(sallesdisponibles)
 
 for (let i = 0; i<sallesdisponibles.length; i++){
     creerlayoutsallemodel(sallesdisponibles[i], carousselmaintenant)

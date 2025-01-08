@@ -352,6 +352,32 @@ a:hover{
     .contenu {
         width : 90%;
     }
+    .left {
+        width: 100%;            /* Prend 50% de la largeur de la page */
+        display: flex;
+        flex-direction: column;      /* Centre l'image verticalement */
+    }
+    .right {
+        width: 100%;              /* Prend 50% de la largeur de la page */
+        display: flex;
+        flex-direction: column;  /* Empile les éléments verticalement */
+    }
+    .information_supplemantaire {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width : 1000px) {
+    .left {
+        width: 50%;            /* Prend 50% de la largeur de la page */
+        display: flex;
+        flex-direction: column;      /* Centre l'image verticalement */
+    }
+    .right {
+        width: 50%;              /* Prend 50% de la largeur de la page */
+        display: flex;
+        flex-direction: column;  /* Empile les éléments verticalement */
+    }
 }
 
 .elementBlanc {
@@ -363,14 +389,6 @@ a:hover{
     top: 0%;       /* Positionné à 20px du haut de la fenêtre */
     left: 0%;      /* Positionné à 20px de la gauche de la fenêtre */
     z-index: 10;     /* S'assure que l'élément est au-dessus de tout autre contenu */
-}
-
-
-/* Div gauche */
-.left {
-    width: 50%;            /* Prend 50% de la largeur de la page */
-    display: flex;
-    flex-direction: column;      /* Centre l'image verticalement */
 }
 
 .img-top {
@@ -386,11 +404,7 @@ a:hover{
 }
 
 /* Div droite */
-.right {
-    width: 50%;              /* Prend 50% de la largeur de la page */
-    display: flex;
-    flex-direction: column;  /* Empile les éléments verticalement */
-}
+
 
 /* Partie du haut (deux div avec du texte collées l'une à côté de l'autre) */
 .top {
@@ -425,4 +439,5 @@ a:hover{
 .information_supplemantaire {
     display: flex;
     height: 100vh;  /* Hauteur de l'écran pour une disposition complète */
+    overflow-y: scroll;
 }
