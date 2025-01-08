@@ -20,12 +20,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF11",
-<<<<<<< HEAD
-            "Une salle spatieuse, sympa, où il y fait bon de passer du temps, mais toujours remplie de premières, terminale passe ton chemin.",
-            "Une salle pour les Goat où ont étudié le fondateur et le co-fondateur.",
-=======
             "une salle bien sympathique, où a étudié le créateur de cette application",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF11",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      1,      1,      1,      1,      0,      0], //Lundi
@@ -45,10 +40,6 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF15",
-<<<<<<< HEAD
-            "Une salle spatieuse, sympa. Des personnes y travaillent souvent sur le tableau. Toujours remplie de terminales, première passe ton chemin.",
-=======
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "La meilleure salle de mathématique, la ZGAM perdurera toujours !",
             "GF15",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
@@ -89,12 +80,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF24",
-<<<<<<< HEAD
-            "Petite salle, souvent remplie de monde. Les gens sont sympas, donc vient manger avec eux.",
-            "J'ai pas de commentaire, si ce n'est que le co-créateur a beaucoup de cours ici. Si tu le cherche, c'est l'endroit parfait.",
-=======
             "sûrement la meilleure salle de tout le lycée, discrète, souvent libre, pas trop de monde",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF24",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      4,      1,      1,      1,      1,      1,      1,      0,      0], //Lundi
@@ -114,12 +100,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF25",
-<<<<<<< HEAD
-            "Inconnue au bataillon, à côté de la GF23, petite. Il y a souvent du monde puisque les gens fuient la GF23.",
-            "Tu veux que je raconte quoi si ce n'est qu'il y a du monde ???",
-=======
             "inconnue au bataillon, à côté de la GF23, il y a souvent du monde puisque les personnes fuient la GF23 ici",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF25",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      4,      1,      1,      1,      1,      1,      0], //Lundi
@@ -139,12 +120,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF30",
-<<<<<<< HEAD
-            "Identique à la GF40, sauf qu'il y a moins de personnes et qu'il manque un tableau au fond de la classe.",
-            "Pourquoi il y a une table random en plein milieu de la salle ? Le zero est justifé par du plagiat.",
-=======
             "assez discète, il faut savoir où la trouver, et en plus, elle est toujours prise",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF30",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      1,      1,      1,      1,      6,      1,      0], //Lundi
@@ -164,12 +140,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF32",
-<<<<<<< HEAD
-            "Salle avec une mauvaise accoustique. Ne pas oublier le doliprane.",
-            "Pendant l'année 2023/2024, c'était là où c'est déroulé le cours le plus goatesque de tous les temps avec M.Masselin, M.Lacroix et la théorie du tout.",
-=======
             "les gens viennent souvent dormir, donc viens pas manger ici",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF32",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      0,      0,      1,      0,      1,      0], //Lundi
@@ -189,12 +160,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF34",
-<<<<<<< HEAD
-            "Salle, avec peu de monde. Toujours remplie le mercredi midi.",
-            "La salle par excellence pour résoudre des équations différentielles d'ordre 4 avec le Goat M.Masselin.",
-=======
             "Pour des raisons que j'ignone, cette salle est souvent pleine",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF34",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      4,      1,      1,      1,      1,      0,      0], //Lundi
@@ -214,12 +180,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF40",
-<<<<<<< HEAD
-            "Souvent occupée le jeudi par des terminales. Il y fait bon de passer du temps. Calme sauf le jeudi, attention aux oreilles. A côté du bureau de Monsieur Depondt.",
-            "Nouvelle Update, la ZLAN s'installe, Minecraft, Fortnite, Subway Surfer, Geometry Dash se sont invités sur le tableau.",
-=======
             "inconnue au bataillon, à droite du bureau de Mme Reiss",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF40",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      6,      0,      1,      1,      1,      1,      0], //Lundi
@@ -239,12 +200,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF41",
-<<<<<<< HEAD
-            "Salle calme, spatieuse, sauf quand des terminales se mettent à crier. Souvent réquisitionnée par des commissions.",
-            "Salle préférée de M.Diao. On sait pas pourquoi, mais il aime passer de la GF40 à la GF41. Attention aux téléphones qui volent.",
-=======
             "Salle calme, sauf quand des terminales viennent faire des tierlists et hurlent",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF41",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      0,      1,      1,      1,      1,      0], //Lundi
@@ -264,12 +220,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF42",
-<<<<<<< HEAD
-            "Salle très calme, où il peut faire froid. Ne pas oublier son pull. Idéal pour faire la sieste.",
-            "Qu'est ce que tu veux raconter sur cette salle où personne ne va. 42 c'est la réponse à tout, donc 20/20.",
-=======
             "salle exentrée, plutôt pas mal",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF42",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      4,      0,      4,      1,      1,      4,      0], //Lundi
@@ -309,12 +260,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF44",
-<<<<<<< HEAD
-            "Super discrète, souvent vide ou avec quelques littéraires... A voir...",
-            "Je n'ai rien à dire mais quand je suis venu il y avait marqué : 'Die Wohngemeinschaft'. Vous avez 4 heures.",
-=======
             "super discrète, souvent remplie de littéraires... A voir...",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF44",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      0,      1,      1,      0,      0,      1,      0], //Lundi
@@ -354,12 +300,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF50",
-<<<<<<< HEAD
-            "Que dire, personne n'y va. Elle est toujours vide, sauf pour les cours.",
-            "Il existe un Goat des maths appartenant aux terminales, qui travaille ici.",
-=======
             "mec t'es vraiment sûr de vouloir aller au 5e ?",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF50",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      0,      1,      1,      1,      1,      1,      0], //Lundi
@@ -379,12 +320,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF51",
-<<<<<<< HEAD
-            "Salle la plus excentrée de tout le lycée. Toujours dispo, sauf si une personne a eu la même idée que toi.",
-            "Que dire, des fantômes y reignent. PAS DE SORTIE AVANT 11H20.",
-=======
             "et oui, on tient la salle la plus excentrée, au moins si t'y vas t'es sûr qu'elle soit libre",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF51",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      6,      1,      0,      0,      1,      1,      1,      1,      0,      0], //Lundi
@@ -404,12 +340,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF52",
-<<<<<<< HEAD
-            "Salle spatieuse, mais un peu vide d'esprit. Toujours prise d'assaut par un groupe d'ami de terminale.",
-            "Détruis ton cardio si tu veux, ce n'est pas mon problème, il y a toujours beaucoup d'agitation.",
-=======
             "détruis ton cardio si tu veux, ce n'est pas mon problème",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF52",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      0,      0,      4,      1,      1,      1,      1,      6,      0], //Lundi
@@ -429,12 +360,7 @@ function resetSalleList (){
     SalleList.push(
         new Sallemodel(
             "GF53",
-<<<<<<< HEAD
-            "Salle d'examen, la plus grande de toutes les salles, interdit de manger.",
-            "T'as vraiement envie de revivre le traumatisme de tes examens. La philo pendant 2 heures, ça peut te tuer.",
-=======
             "salle d'examen, interdit de manger",
->>>>>>> parent of 2ca0ec9 (mise à jour description)
             "GF53",
             [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [0,      0,      0,      1,      0,      0,      0,      1,      1,      0,      0], //Lundi
@@ -565,13 +491,9 @@ function numeroheuredecours(heuredonnee){
 
 //-----Connaitre un jour de la semaine pour une date donnée | Les jours de la semaines sont : Dimanche = 0; Lundi = 1; Mardi = 2; Mercredi = 3; Jeudi = 4; Vendredi = 5; Samedi = 6-----
 function joursemaine(date){
-<<<<<<< HEAD
-    let date_find = new Date(date[2],date[1],date[0]) //Initialisation de la date à la date choisi par l'utilisateur
-=======
     
     let date_find = new Date(date[2],date[1]-1,date[0]) //Initialisation de la date à la date choisi par l'utilisateur
     
->>>>>>> parent of 2ca0ec9 (mise à jour description)
     let joursemaine = date_find.getDay() - 1
     
     if (joursemaine < 0){
@@ -590,10 +512,6 @@ function heureapres(heure){
 }
 
 function moisenfonctionnom(mois){
-<<<<<<< HEAD
-    let _mois = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    return _mois.indexOf(mois)
-=======
     if (mois == "January"){
         return (1)
     } else if (mois == "February"){
@@ -619,7 +537,6 @@ function moisenfonctionnom(mois){
     } else if (mois == "December"){
         return (12)
     }
->>>>>>> parent of 2ca0ec9 (mise à jour description)
 }
 
 function heuredecoursfonctionstring (heuredecours){
@@ -708,34 +625,6 @@ function creerlayoutsallemodel(salle, parentelement){
     divtitre.style.top = divcontenu.style.paddingTop;
     divtitre.style.left = `${divimagecontainer.offsetWidth+20}px`
 
-<<<<<<< HEAD
-    //-----Insertion de l'image-----
-    let divimage = document.createElement("img") //Création de la div pour l'image
-    let get_more_information_image = document.createElement("button") //Création d'un lien qui est clickable dans l'image
-    //-----Apparance du button pour l'image-----
-    get_more_information_image.style.appearance = "none";
-    get_more_information_image.style.border = "none";
-    get_more_information_image.style.cursor = "pointer";
-    get_more_information_image.style.BackgroundColor = "inherit"
-    get_more_information_image.setAttribute("class", salle.name);
-    get_more_information_image.onclick = function(){More_Information_Salle(get_more_information_image.classList)}
-
-    divimagecontainer.appendChild(get_more_information_image)
-    get_more_information_image.appendChild(divimage) //Mettre l'image en enfant du conteneur de l'image
-    divimage.classList.add("SalleModel_image") //Ajout d'une class à la div de l'image
-    console.log("lol")
-    divimage.src = `images/${salle.image}.jpg` //Récupération de l'image du côté serveur
-
-    //-----Insertion de la description-----
-    let divdescription = creatediv(div_contenu, "SalleModel_description") //Création de la div pour la description de la salle
-    divdescription.style.height = `${parseInt(divimagecontainer.style.height) - 20}px` //Initialisation de la hauteur de la description
-    divdescription.style.overflowY = "scroll" //Ajout d'une barre de défilement pour l'overflox sur la hauteur
-    divdescription.style.backgroundColor = "rgba(199, 199, 199, 0.3)" //Changement de la texture d'arrière plan pour la description
-    divdescription.innerHTML = salle.description //Initialisation de la description de salle
-    divdescription.style.left = divtitre.style.left //Décaler l'image de quelque pixel vers la droite par rapport à la gauche de l'image
-    divdescription.style.top = `${divtitre.offsetHeight +10}px` //Décaler le titre de quelque pixel vers le bas par rapport au haut de la div
-    divdescription.style.width = `${div_contenu.offsetWidth - divimagecontainer.offsetWidth -30}px` //Initialisation de la largeur de la description
-=======
     //insertion de l'image
     let divimage = document.createElement("img")
     divimagecontainer.appendChild(divimage)
@@ -752,7 +641,6 @@ function creerlayoutsallemodel(salle, parentelement){
     divdescription.style.left = divtitre.style.left
     divdescription.style.top = `${divtitre.offsetHeight +10}px`
     divdescription.style.width = `${divcontenu.offsetWidth - divimagecontainer.offsetWidth -30}px`
->>>>>>> parent of 2ca0ec9 (mise à jour description)
     
 }
 
