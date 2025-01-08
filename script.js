@@ -634,6 +634,7 @@ function creerlayoutsallemodel(salle, parentelement){
     divimagecontainer.appendChild(get_more_information_image)
     get_more_information_image.appendChild(divimage) //Mettre l'image en enfant du conteneur de l'image
     divimage.classList.add("SalleModel_image") //Ajout d'une class à la div de l'image
+    console.log("lol")
     divimage.src = `images/${salle.image}.jpg` //Récupération de l'image du côté serveur
 
     //-----Insertion de la description-----
