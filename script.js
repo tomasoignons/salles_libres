@@ -24,7 +24,7 @@ function resetSalleList (){
             "Une salle spatieuse, sympa, où il y fait bon de passer du temps, mais toujours remplie de premières, terminale passe ton chemin.",
             "Une salle pour les Goat où ont étudié le fondateur et le co-fondateur.",
             "GF11",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      1,      1,      1,      1,      0,      0], //Lundi
                 [1,      1,      1,      4,      6,      0,      1,      1,      1,      1,      0], //Mardi
                 [1,      1,      1,      1,      0,      1,      1,      1,      1,      0,      0], //Mercredi
@@ -45,7 +45,7 @@ function resetSalleList (){
             "Une salle spatieuse, sympa. Des personnes y travaillent souvent sur le tableau. Toujours remplie de terminales, première passe ton chemin.",
             "La meilleure salle de mathématique, la ZGAM perdurera toujours !",
             "GF15",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      1,      1,      6,      6,      1,      0], //Lundi
                 [1,      1,      1,      1,      0,      0,      1,      1,      1,      1,      0], //Mardi
                 [1,      0,      1,      1,      1,      0,      1,      4,      1,      0,      0], //Mercredi
@@ -66,7 +66,7 @@ function resetSalleList (){
             "Souvent dispo. Souvent pleine de monde, trés spatieuse. Beaucoup trop bruyante, je déconseille fortement.",
             "'Un tyran n'est pas innocent'. 'Député'. Pourquoi il y a de la politique dans cette classe ? On est pas censé être ami ???",
             "GF23",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      0,      1,      1,      4,      0,      0], //Lundi
                 [1,      1,      1,      0,      0,      0,      1,      1,      6,      4,      0], //Mardi
                 [1,      1,      1,      0,      1,      1,      1,      6,      1,      0,      0], //Mercredi
@@ -87,7 +87,7 @@ function resetSalleList (){
             "Petite salle, souvent remplie de monde. Les gens sont sympas, donc vient manger avec eux.",
             "J'ai pas de commentaire, si ce n'est que le co-créateur a beaucoup de cours ici. Si tu le cherche, c'est l'endroit parfait.",
             "GF24",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      4,      1,      1,      1,      1,      1,      1,      0,      0], //Lundi
                 [6,      6,      1,      1,      0,      0,      1,      1,      1,      0,      0], //Mardi
                 [1,      0,      0,      1,      1,      0,      1,      0,      0,      0,      0], //Mercredi
@@ -108,7 +108,7 @@ function resetSalleList (){
             "Inconnue au bataillon, à côté de la GF23, petite. Il y a souvent du monde puisque les gens fuient la GF23.",
             "Tu veux que je raconte quoi si ce n'est qu'il y a du monde ???",
             "GF25",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      4,      1,      1,      1,      1,      1,      0], //Lundi
                 [1,      1,      1,      1,      0,      0,      1,      1,      1,      1,      0], //Mardi
                 [1,      1,      1,      1,      1,      1,      1,      0,      4,      0,      0], //Mercredi
@@ -129,7 +129,7 @@ function resetSalleList (){
             "Identique à la GF40, sauf qu'il y a moins de personnes et qu'il manque un tableau au fond de la classe.",
             "Pourquoi il y a une table random en plein milieu de la salle ? Le zero est justifé par du plagiat.",
             "GF30",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      1,      1,      1,      1,      6,      1,      0], //Lundi
                 [1,      1,      1,      1,      4,      0,      1,      1,      1,      1,      0], //Mardi
                 [1,      0,      6,      1,      0,      0,      1,      0,      0,      0,      0], //Mercredi
@@ -150,7 +150,7 @@ function resetSalleList (){
             "Salle avec une mauvaise accoustique. Ne pas oublier le doliprane.",
             "Pendant l'année 2023/2024, c'était là où c'est déroulé le cours le plus goatesque de tous les temps avec M.Masselin, M.Lacroix et la théorie du tout.",
             "GF32",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      0,      0,      1,      0,      1,      0], //Lundi
                 [1,      1,      1,      1,      0,      0,      0,      0,      1,      1,      0], //Mardi
                 [1,      1,      1,      1,      0,      1,      1,      0,      0,      1,      0], //Mercredi
@@ -171,7 +171,7 @@ function resetSalleList (){
             "Salle, avec peu de monde. Toujours remplie le mercredi midi.",
             "La salle par excellence pour résoudre des équations différentielles d'ordre 4 avec le Goat M.Masselin.",
             "GF34",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      4,      1,      1,      1,      1,      0,      0], //Lundi
                 [1,      1,      1,      1,      0,      0,      1,      1,      1,      4,      0], //Mardi
                 [1,      1,      1,      1,      1,      0,      0,      0,      0,      0,      0], //Mercredi
@@ -192,7 +192,7 @@ function resetSalleList (){
             "Souvent occupée le jeudi par des terminales. Il y fait bon de passer du temps. Calme sauf le jeudi, attention aux oreilles. A côté du bureau de Monsieur Depondt.",
             "Nouvelle Update, la ZLAN s'installe, Minecraft, Fortnite, Subway Surfer, Geometry Dash se sont invités sur le tableau.",
             "GF40",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      6,      0,      1,      1,      1,      1,      0], //Lundi
                 [1,      1,      1,      1,      0,      0,      1,      1,      1,      1,      0], //Mardi
                 [1,      0,      1,      6,      0,      1,      1,      1,      1,      0,      0], //Mercredi
@@ -213,7 +213,7 @@ function resetSalleList (){
             "Salle calme, spatieuse, sauf quand des terminales se mettent à crier. Souvent réquisitionnée par des commissions.",
             "Salle préférée de M.Diao. On sait pas pourquoi, mais il aime passer de la GF40 à la GF41. Attention aux téléphones qui volent.",
             "GF41",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      0,      0,      1,      1,      1,      1,      0], //Lundi
                 [1,      1,      1,      0,      0,      0,      1,      1,      1,      1,      0], //Mardi
                 [1,      1,      1,      4,      6,      1,      1,      0,      6,      0,      0], //Mercredi
@@ -234,7 +234,7 @@ function resetSalleList (){
             "Salle très calme, où il peut faire froid. Ne pas oublier son pull. Idéal pour faire la sieste.",
             "Qu'est ce que tu veux raconter sur cette salle où personne ne va. 42 c'est la réponse à tout, donc 20/20.",
             "GF42",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      1,      4,      0,      4,      1,      1,      4,      0], //Lundi
                 [1,      1,      1,      1,      0,      0,      1,      1,      6,      1,      0], //Mardi
                 [0,      1,      1,      1,      1,      1,      1,      6,      6,      0,      0], //Mercredi
@@ -255,7 +255,7 @@ function resetSalleList (){
             "Salle centrale, domaine des terminales. Beaucoup de bruit, et de click de souris.",
             "Parfaite pour les joueurs de LOL, ou pour les personnes qui aiment voir du bon gameplay.",
             "GF43",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      0,      0,      6,      1,      1,      1,      0], //Lundi
                 [1,      1,      1,      1,      0,      0,      1,      1,      1,      4,      0], //Mardi
                 [1,      0,      1,      1,      1,      0,      1,      0,      6,      0,      0], //Mercredi
@@ -276,7 +276,7 @@ function resetSalleList (){
             "Super discrète, souvent vide ou avec quelques littéraires... A voir...",
             "Je n'ai rien à dire mais quand je suis venu il y avait marqué : 'Die Wohngemeinschaft'. Vous avez 4 heures.",
             "GF44",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      0,      1,      1,      0,      0,      1,      0], //Lundi
                 [1,      1,      0,      0,      0,      0,      1,      1,      6,      0,      0], //Mardi
                 [0,      1,      1,      0,      0,      0,      0,      0,      4,      1,      0], //Mercredi
@@ -297,7 +297,7 @@ function resetSalleList (){
             "Petite salle calme où les gens y font la sieste. Viens te joindre à eux !",
             "Qu'est ce que tu veux raconter sur cette salle où tout le monde dort. On oubli tous nos soucis.",
             "GF45",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      0,      1,      4,      0,      1,      1,      0,      0,      0], //Lundi
                 [1,      1,      1,      1,      0,      0,      1,      1,      1,      0,      0], //Mardi
                 [1,      0,      0,      1,      1,      0,      0,      6,      0,      6,      0], //Mercredi
@@ -318,7 +318,7 @@ function resetSalleList (){
             "Que dire, personne n'y va. Elle est toujours vide, sauf pour les cours.",
             "Il existe un Goat des maths appartenant aux terminales, qui travaille ici.",
             "GF50",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      1,      0,      0,      1,      1,      1,      1,      1,      0], //Lundi
                 [1,      4,      1,      1,      0,      1,      1,      1,      6,      6,      0], //Mardi
                 [1,      0,      1,      1,      1,      0,      0,      1,      1,      0,      0], //Mercredi
@@ -339,7 +339,7 @@ function resetSalleList (){
             "Salle la plus excentrée de tout le lycée. Toujours dispo, sauf si une personne a eu la même idée que toi.",
             "Que dire, des fantômes y reignent. PAS DE SORTIE AVANT 11H20.",
             "GF51",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      6,      1,      0,      0,      1,      1,      1,      1,      0,      0], //Lundi
                 [1,      1,      1,      1,      0,      0,      1,      1,      1,      6,      0], //Mardi
                 [1,      0,      4,      1,      1,      0,      0,      0,      0,      0,      0], //Mercredi
@@ -360,7 +360,7 @@ function resetSalleList (){
             "Salle spatieuse, mais un peu vide d'esprit. Toujours prise d'assaut par un groupe d'ami de terminale.",
             "Détruis ton cardio si tu veux, ce n'est pas mon problème, il y a toujours beaucoup d'agitation.",
             "GF52",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [1,      1,      0,      0,      4,      1,      1,      1,      1,      6,      0], //Lundi
                 [4,      1,      1,      1,      0,      0,      1,      1,      4,      4,      0], //Mardi
                 [0,      0,      1,      1,      1,      1,      1,      4,      0,      1,      0], //Mercredi
@@ -381,7 +381,7 @@ function resetSalleList (){
             "Salle d'examen, la plus grande de toutes les salles, interdit de manger.",
             "T'as vraiement envie de revivre le traumatisme de tes examens. La philo pendant 2 heures, ça peut te tuer.",
             "GF53",
-            [  //08h20 - 09h15 - 10h30 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
+            [  //08h20 - 09h15 - 10h10 - 11h25 - 12h20 - 13h15 - 14h10 - 15h50 - 16h15 - 17h10 - 18h05 | Mise à jour
                 [0,      0,      0,      1,      0,      0,      0,      1,      1,      0,      0], //Lundi
                 [0,      0,      0,      0,      0,      1,      1,      1,      1,      1,      0], //Mardi
                 [0,      0,      1,      1,      1,      0,      0,      0,      0,      0,      0], //Mercredi
@@ -453,7 +453,7 @@ function numeroheuredecours(heuredonnee){
             return (0)
         }
     } else if (heure == 10){
-        if (minute <10){
+        if (minute < 10){
             return (1)
         } else {
             return (2)
@@ -586,6 +586,14 @@ function findsalle(sallename){
         }
     }
     return
+}
+
+//-----Afficher les informations sur le mode d'emploi-----
+function showHostname() {
+    let currentURL = window.location.hostname;
+    alert(
+        "Pour accéder à plus d'information sur les salles, cliqué sur les images des salles."
+    );
 }
 
 //-------------------------------------FONCTIONS DE CREATION D'ELEMENTS AVEC LES SALLES MODELS------------------------

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Alert Hostname Example</title>
+</head>
+
+<body style="text-align: center;">
+    <h1 style="color: green;">
+        Geeks
+    </h1>
+    <p>
+        To see the hostname of the current URL,
+        click the "Show Hostname" button:
+    </p>
+
+    <button onclick="showHostname()">
+        Show Hostname
+    </button>
+
+    <script>
+        function showHostname() {
+            let currentURL = window.location.hostname;
+            alert(
+                "Pour accéder à plus d'information sur les salles, cliqué sur les images des salles."
+            );
+        }
+    </script>
+</body>
+
+</html>
