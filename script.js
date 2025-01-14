@@ -589,12 +589,20 @@ function findsalle(sallename){
 }
 
 //-----Afficher les informations sur le mode d'emploi-----
-function showHostname() {
-    let currentURL = window.location.hostname;
-    alert(
-        "Pour accéder à plus d'information sur les salles, cliqué sur les images des salles."
-    );
-}
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("dialog + button");
+const closeButton = document.querySelector("dialog button");
+
+// Le bouton "Afficher la fenêtre" ouvre le dialogue
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// Le bouton "Fermer" ferme le dialogue
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+
 
 //-------------------------------------FONCTIONS DE CREATION D'ELEMENTS AVEC LES SALLES MODELS------------------------
 

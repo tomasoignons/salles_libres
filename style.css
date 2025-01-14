@@ -441,3 +441,14 @@ a:hover{
     height: 100vh;  /* Hauteur de l'écran pour une disposition complète */
     overflow-y: scroll;
 }
+
+::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      magenta,
+      rebeccapurple,
+      dodgerblue,
+      green
+    );
+    opacity: 0.75;
+  }
