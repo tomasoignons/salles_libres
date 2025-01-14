@@ -78,7 +78,7 @@ function resetSalleList (){
             "0h00m",
             0,
             false,
-            "8"
+            "8/20"
         )
     )
     SalleList.push(
@@ -1168,7 +1168,7 @@ function Information_Note(div_info_container, _salle) {
     element.innerHTML  = "Note" //Ajout d'une class à la div de l'image
     element = document.createElement("br") //Création de la div pour l'image
     fr_div.appendChild(element)
-    element = document.createElement("p") //Création de la div pour l'image
+    element = document.createElement("h3") //Création de la div pour l'image
     fr_div.appendChild(element)
     element.innerHTML  = _salle.note //Ajout d'une class à la div de l'image
 }
@@ -1180,7 +1180,7 @@ function Information_Disponibilite(div_info_container, _salle) {
     element.innerHTML  = "Disponibilité" //Ajout d'une class à la div de l'image
     element = document.createElement("br") //Création de la div pour l'image
     fr_div.appendChild(element)
-    element = document.createElement("p") //Création de la div pour l'image
+    element = document.createElement("h3") //Création de la div pour l'image
     fr_div.appendChild(element)
     if (_salle.disponibilite == false) {
         element.innerHTML  = "Salle occupée" //Ajout d'une class à la div de l'image
@@ -1197,7 +1197,7 @@ function Information_Duree(div_info_container, _salle) {
     element.innerHTML  = "Durée restante" //Ajout d'une class à la div de l'image
     element = document.createElement("br") //Création de la div pour l'image
     fr_div.appendChild(element)
-    element = document.createElement("p") //Création de la div pour l'image
+    element = document.createElement("h3") //Création de la div pour l'image
     fr_div.appendChild(element)
     element.innerHTML  = _salle.temps //Ajout d'une class à la div de l'image
 }
@@ -1210,7 +1210,7 @@ function Description_Objective(div_info_container, _salle) {
     element.innerHTML  = "Déscription de la salle" //Ajout d'une class à la div de l'image
     element = document.createElement("br") //Création de la div pour l'image
     fr_div.appendChild(element)
-    element = document.createElement("p") //Création de la div pour l'image
+    element = document.createElement("h3") //Création de la div pour l'image
     fr_div.appendChild(element)
     element.innerHTML  = _salle.description //Ajout d'une class à la div de l'image
 }
@@ -1223,7 +1223,7 @@ function Description_Subjective(div_info_container, _salle) {
     element.innerHTML  = "Déscription de l'ambiance" //Ajout d'une class à la div de l'image
     element = document.createElement("br") //Création de la div pour l'image
     fr_div.appendChild(element)
-    element = document.createElement("p") //Création de la div pour l'image
+    element = document.createElement("h3") //Création de la div pour l'image
     fr_div.appendChild(element)
     element.innerHTML  = _salle.reference //Ajout d'une class à la div de l'image
 }
