@@ -420,7 +420,7 @@ function FonctionDate(){
 
 //-----Obtenir le numero de la semaine-----
 function numerosemaine(date){
-    const dateactuelle = new Date(date[2], date[1]-1, date[0]); //Récupération de la date actuelle
+    const dateactuelle = new Date(date[2], date[1], date[0]); //Récupération de la date actuelle
     const oneJan = new Date(dateactuelle.getFullYear(),0,1); //Récupération de la date du 1 janvier
     let numberOfDays = Math.floor((dateactuelle - oneJan) / (24 * 60 * 60 * 1000));
     let numerosemaine = Math.ceil(( dateactuelle.getDay() + 1 + numberOfDays) / 7);
@@ -431,6 +431,7 @@ function numerosemaine(date){
 //probaabilité importante qu'il y ait un truc qui merde ici lol
 function paireimpaire(date){
     let paireimpaire = numerosemaine(date)%2
+    console.log(paireimpaire)
     if (paireimpaire == 0){
         return ("A")
     } else if (paireimpaire == 1){
@@ -550,19 +551,13 @@ function sallesdispo(date, heure){
     if (heure[1] !== undefined){
         heure = numeroheuredecours(heure)
     }
-    console.log("heure : ", heure)
     let sallesdisponibles = []
     if (heure == 30){
         return(sallesdisponibles)
     }
-    console.log("paire : ", paire)
     if (paire == "A"){
-        console.log("ok")
         for (let i = 0; i < SalleList.length; i++) {
-            console.log(SalleList[i].planning, jour, heure);
-
             if (SalleList[i].planning[jour][heure] == 0 || SalleList[i].planning[jour][heure] == 6){
-                console.log("lol");
                 sallesdisponibles.push(SalleList[i]);
             }
         }
@@ -676,7 +671,6 @@ const carousselheureapres = document.getElementById("contenu_prochaineheure")
 const dateajd = FonctionDate()
 const heureactuelle = Heure()
 const sallesdisponibles = sallesdispo(dateajd, heureactuelle)
-console.log(sallesdisponibles)
 
 for (let i = 0; i<sallesdisponibles.length; i++){
     creerlayoutsallemodel(sallesdisponibles[i], carousselmaintenant)
@@ -985,9 +979,9 @@ function creerlayoutplanningsalle(parentelement){
     const datedegueu = document.getElementsByClassName("form-control")[0].value.split(" ") //Récupération de la date
     
     const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
-    console.log(date)
     
     const paireimpaires = paireimpaire(date) //Récupérer la semaine en question (A ou B)
+    console.log(paireimpaire)
     const jour = joursemaine(date) //Récupérer le jour de la semaine
 
     const salle = findsalle(nom_salle) //Récupération de toutes les informations de la salle concerné
@@ -1234,13 +1228,11 @@ function Emploi_Du_Temps_More(parentelement, salle) {
     const container = creatediv(parentelement, "container_planning_salle") //Création du conteneur qui contiendra le calendrier de la journée de la salle
     const datedegueu = new Date()
     const date = [parseInt(datedegueu.getDate()), parseInt(datedegueu.getMonth()), parseInt(datedegueu.getFullYear())]
-    console.log(datedegueu.getMonth())
     
     const paireimpaires = paireimpaire(date) //Récupérer la semaine en question (A ou B)
     const jour = joursemaine(date) //Récupérer le jour de la semaine
 
     const arrayatrier = salle.planning[jour] //Récupération de toutes les informations du calendrier de la journée
-    console.log(date, paireimpaires, jour, salle, arrayatrier)
     
     let newarray = []
     //-----Ecrire correctement en fonction des semaines l'emploi du temps dans la liste --> newarray-----
