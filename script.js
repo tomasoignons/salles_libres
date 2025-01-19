@@ -420,18 +420,17 @@ function FonctionDate(){
 
 //-----Obtenir le numero de la semaine-----
 function numerosemaine(date){
-    const dateactuelle = new Date(date[2], date[1], date[0]); //Récupération de la date actuelle
-    const oneJan = new Date(dateactuelle.getFullYear(),0,1); //Récupération de la date du 1 janvier
-    let numberOfDays = Math.floor((dateactuelle - oneJan) / (24 * 60 * 60 * 1000));
-    let numerosemaine = Math.ceil(( dateactuelle.getDay() + 1 + numberOfDays) / 7);
-    return(numerosemaine)
+    currentdate = new Date(date[2], date[1], date[0]);
+    var _oneJan = new Date(currentdate.getFullYear(), 0, 1);
+    var _numberOfDays = Math.floor((currentdate - _oneJan) / (24 * 60 * 60 * 1000));
+    var result = Math.ceil((currentdate.getDay() + 2 + _numberOfDays) / 7);
+    return(result)
 }
 
 //savoir si une date est dans une semaine paire ou impaire
 //probaabilité importante qu'il y ait un truc qui merde ici lol
 function paireimpaire(date){
     let paireimpaire = numerosemaine(date)%2
-    console.log(paireimpaire)
     if (paireimpaire == 0){
         return ("A")
     } else if (paireimpaire == 1){
@@ -981,7 +980,6 @@ function creerlayoutplanningsalle(parentelement){
     const date = [parseInt(datedegueu[0]), moisenfonctionnom(datedegueu[1]), parseInt(datedegueu[2])]
     
     const paireimpaires = paireimpaire(date) //Récupérer la semaine en question (A ou B)
-    console.log(paireimpaire)
     const jour = joursemaine(date) //Récupérer le jour de la semaine
 
     const salle = findsalle(nom_salle) //Récupération de toutes les informations de la salle concerné
@@ -1285,7 +1283,7 @@ function Calcul_Temps_Restant(_salle) {
     
 
     if (_salle.disponibilite == false) {
-        return "Plus de templs, salle indisponible"
+        return "Plus de temps, salle indisponible"
     }
 
 
