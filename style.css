@@ -16,6 +16,13 @@ body{
 .enormetitre{
     text-align: center;
     z-index :5;
+    border-radius: 15px;
+}
+
+.enormetitre > dialog{
+    text-align: center;
+    z-index :5;
+    border-radius: 15px;
 }
 
 .container {
@@ -327,13 +334,13 @@ h2, h3{
 a{
     font-size: 1.2em;
     font-weight: bold;
-    color : #E7E8ED;
+    color : #0040ff;
     transition : all 0.3s ease;
     text-decoration: none;
 }
 
 a:hover{
-    color : white;
+    color : rgb(255, 196, 0);
     transition : all 0.3s ease;
 }
 
@@ -347,6 +354,11 @@ a:hover{
         z-index: 1;
     }
     .enormetitre{
+        border-radius: 5px;
+        margin-top: 50px;
+    }
+    .enormetitre > dialog{
+        border-radius: 15px;
         margin-top: 50px;
     }
     .contenu {
