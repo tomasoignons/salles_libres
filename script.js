@@ -418,19 +418,20 @@ function FonctionDate(){
     return(date)
 }
 
-//-----Obtenir le numero de la semaine-----
+//-----Obtenir le numero de la semaine----- Ce morceau de code à de trés forte chance de causer des problèmes.
 function numerosemaine(date){
-    currentdate = new Date(date[2], date[1], date[0]);
-    var _oneJan = new Date(currentdate.getFullYear(), 0, 1);
-    var _numberOfDays = Math.floor((currentdate - _oneJan) / (24 * 60 * 60 * 1000));
-    var result = Math.ceil((currentdate.getDay() + 2 + _numberOfDays) / 7);
-    return(result)
+    var d = a ? new Date(a) : new Date();
+    d.setHours(0,0,0,0);
+    d.setDate(d.getDate() + 3 - (d.getDay() + 6) % 7);
+    var w = new Date(d.getFullYear(), 0, 4);
+    return ((1 + Math.round(((d.getTime() - w.getTime()) / 86400000 - 3 + (w.getDay() + 6) % 7) / 7)));
 }
 
 //savoir si une date est dans une semaine paire ou impaire
 //probaabilité importante qu'il y ait un truc qui merde ici lol
 function paireimpaire(date){
     let paireimpaire = numerosemaine(date)%2
+    console.log(paireimpaire)
     if (paireimpaire == 0){
         return ("A")
     } else if (paireimpaire == 1){
@@ -543,6 +544,7 @@ function heuredecoursfonctionstring(heuredecours){
 function sallesdispo(date, heure){
     jour = joursemaine(date) //Récupérer le jour de la semaine
     paire = paireimpaire(date) //Savoir le type de la semaine
+    
     //-----Si il n'y a pas d'heure de défini-----
     if (heure == undefined){
         heure = 0
