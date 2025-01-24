@@ -420,12 +420,22 @@ function FonctionDate(){
 
 //-----Obtenir le numero de la semaine----- Ce morceau de code à de trés forte chance de causer des problèmes.
 function numerosemaine(date){
+    currentdate = new Date(date[2], date[1], date[0]);
+    var _oneJan = new Date(currentdate.getFullYear(), 0, 1);
+    var _numberOfDays = Math.floor((currentdate - _oneJan) / (24 * 60 * 60 * 1000));
+    var result = Math.ceil((currentdate.getDay() + _numberOfDays) / 7);
+    let inter_var = dateWeek(new Date(date[2], date[1], date[0]));
+    return(resuinter_varlt)
+}
+
+function dateWeek(a) {
     var d = a ? new Date(a) : new Date();
+    console.log(d)
     d.setHours(0,0,0,0);
     d.setDate(d.getDate() + 3 - (d.getDay() + 6) % 7);
     var w = new Date(d.getFullYear(), 0, 4);
     return ((1 + Math.round(((d.getTime() - w.getTime()) / 86400000 - 3 + (w.getDay() + 6) % 7) / 7)));
-}
+  }
 
 //savoir si une date est dans une semaine paire ou impaire
 //probaabilité importante qu'il y ait un truc qui merde ici lol
