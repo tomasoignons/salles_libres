@@ -425,7 +425,7 @@ function numerosemaine(date){
     var _numberOfDays = Math.floor((currentdate - _oneJan) / (24 * 60 * 60 * 1000));
     var result = Math.ceil((currentdate.getDay() + _numberOfDays) / 7);
     let inter_var = dateWeek(new Date(date[2], date[1], date[0]));
-    return(resuinter_varlt)
+    return(inter_var)
 }
 
 function dateWeek(a) {
